@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Category from './category';
 
-const index = () => {
+const Community = () => {
+  // ADD Communities Page(2. Browse Communities) Here ----- This is the "Browse" Tab on Left Panel
 
-    // ADD Communities Page(2. Browse Communities) Here ----- This is the "Browse" Tab on Left Panel
-
-
-    // Once a Specific Communitity is Clicked, User will be redirected to Community Page (Single)
-
+  // Once a Specific Communitity is Clicked, User will be redirected to Community Page (Single)
 
   return (
-    <div>index</div>
-  )
-}
+    <div>
+      <Category />
+    </div>
+  );
+};
 
-export default index
+export default Community;
