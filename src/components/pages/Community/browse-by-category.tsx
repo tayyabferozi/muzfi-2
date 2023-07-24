@@ -1,8 +1,8 @@
+// @ts-nocheck
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-
-import Card from 'components/common/Card';
-import useSwiperRef from 'hooks/useSwiperRef';
+import useSwiperRef from '../../../hooks/useSwiperRef';
+import Card from '../../common/Card';
 
 const category = {
   img: '/assets/imgs/home/user-img-9.png',

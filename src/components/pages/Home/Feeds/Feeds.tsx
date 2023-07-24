@@ -1,11 +1,11 @@
-import Card from 'components/common/Card';
-import GradientBtn from 'components/buttons/GradientBtn';
+import GradientBtn from '../../../buttons/GradientBtn';
+import Card from '../../../common/Card/Card';
 
-const Feeds = ({ feedTypes }) => {
+const Feeds = ({ feedTypes }: { feedTypes: any }) => {
   return (
     <Card>
       <div className='flex flex-wrap gap-[8px] mt-[px]'>
-        {feedTypes.map((el, idx) => {
+        {feedTypes.map((el: any, idx: any) => {
           return (
             <GradientBtn
               key={'home-feed-type' + idx}

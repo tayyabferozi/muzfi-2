@@ -1,6 +1,14 @@
 import clsx from 'clsx';
 
-const Card = ({ noMt, className, children }) => {
+const Card = ({
+  noMt,
+  className,
+  children,
+}: {
+  noMt?: any;
+  className?: string;
+  children: React.ReactNode;
+}) => {
   return (
     <div
       className={clsx(

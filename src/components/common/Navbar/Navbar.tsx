@@ -1,16 +1,21 @@
 import { Link } from 'react-router-dom';
+import GradientBtn from '../../buttons/GradientBtn';
+import Search from '../Search/Search';
 
-import GradientBtn from 'components/buttons/GradientBtn';
-import Search from 'components/common/Search';
-
-const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
+const Navbar = ({
+  isSidebarOpen,
+  setIsSidebarOpen,
+}: Partial<{
+  isSidebarOpen: any;
+  setIsSidebarOpen: any;
+}>) => {
   return (
     <nav className='fixed inset-x-0 top-0 z-50 shadow-lg bg-primary'>
       <div className='   container   h-[70px] flex justify-between items-center py-4 sm:px-[24px] px-[12px] z-20'>
         <div className='flex items-center flex-grow h-5 gap-3 xl:w-1/3 '>
           <div
             className='flex flex-col gap-1 xl:hidden'
-            onClick={() => setIsSidebarOpen((prevState) => !prevState)}
+            onClick={() => setIsSidebarOpen((prevState: any) => !prevState)}
           >
             <div className='bg-white w-5 h-[2px]'></div>
             <div className='bg-white w-5 h-[2px]'></div>

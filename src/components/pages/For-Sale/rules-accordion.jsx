@@ -4,7 +4,7 @@ import * as Accordion from '@radix-ui/react-accordion';
 export default function RulesAccordion() {
   return (
     <section>
-      <p class='text-xl font-semibold'>r/NatureIsFuckingLit Rules</p>
+      <p className='text-xl font-semibold'>r/NatureIsFuckingLit Rules</p>
       <Accordion.Root type='single' collapsible>
         {data.map((_, idx) => (
           <Accordion.Item

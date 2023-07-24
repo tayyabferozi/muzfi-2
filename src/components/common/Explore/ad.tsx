@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function Ad() {
   const { pathname } = useLocation();
-  const [{ head = null, caption } = {}] = routes.filter(
+  const [{ head = null, caption = '' } = {}] = routes.filter(
     (_) => _.pathname === pathname
   );
 

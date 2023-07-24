@@ -1,12 +1,12 @@
-import Card from 'components/common/Card';
 import TopGearRooms from './TopGearRooms';
 import SubCommunities from './SubCommunities/SubCommunities';
 import Reviews from './Reviews';
 import Reviews2 from './Reviews2';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import ExploreMenu from 'components/pages/For-Sale/explore-menu';
 import { Ruler } from '../ruler';
+import ExploreMenu from '../../pages/For-Sale/explore-menu';
+import Card from '../Card';
 
 const links = [
   'About Us',

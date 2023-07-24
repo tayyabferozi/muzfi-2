@@ -1,11 +1,11 @@
 import { Icon } from '@iconify/react';
-import LightBlueBtn from 'components/buttons/LightBlueBtn/LightBlueBtn';
-import YellowBtn from 'components/buttons/YellowBtn/YellowBtn';
+import LightBlueBtn from '../../buttons/LightBlueBtn';
+import YellowBtn from '../../buttons/YellowBtn';
 
 export default function Moderators() {
   return (
     <section>
-      <p class='text-lg font-semibold'>Moderators</p>
+      <p className='text-lg font-semibold'>Moderators</p>
       <div className='space-y-2'>
         {data.map((_) => (
           <p className='text-sm font-medium'>{_}</p>

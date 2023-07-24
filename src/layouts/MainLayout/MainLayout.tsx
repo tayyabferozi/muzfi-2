@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-
-import Sidebar from 'components/common/Sidebar';
-import Navbar from 'components/common/Navbar';
-import Explore from 'components/common/Explore';
-import Ad from 'components/common/Explore/ad';
+import Explore from '../../components/common/Explore';
+import Ad from '../../components/common/Explore/ad';
+import Navbar from '../../components/common/Navbar';
+import Sidebar from '../../components/common/Sidebar';
 
 const MainLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

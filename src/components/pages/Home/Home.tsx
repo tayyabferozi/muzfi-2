@@ -1,4 +1,4 @@
-import Search from 'components/common/Search/Search';
+import Search from '../../common/Search/Search';
 import Categories from './Categories';
 import Feeds from './Feeds';
 import Posts from './Posts';

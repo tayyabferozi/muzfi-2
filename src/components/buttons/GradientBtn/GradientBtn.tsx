@@ -10,7 +10,18 @@ const GradientBtn = ({
   label,
   textSm,
   veryShort,
-}) => {
+}: Partial<{
+  className: any;
+  textClassName: any;
+  iconClassName: any;
+  textLight: any;
+  lg: any;
+  short: boolean;
+  icon: any;
+  label: any;
+  textSm: any;
+  veryShort: any;
+}>) => {
   return (
     <button
       className={clsx(

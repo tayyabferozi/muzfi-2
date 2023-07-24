@@ -1,16 +1,17 @@
 import { Icon } from '@iconify/react';
-import { cn } from 'helpers/utils';
+import { cn } from '../../../helpers/utils';
 
-export default function Category({ category }) {
+export default function Category({ category }: { category: any }) {
   return (
     <section className='flex items-center gap-4'>
-      {category.map((_) => (
+      {category.map((_: any) => (
         <CategoryCard {..._} />
       ))}
     </section>
   );
 }
 
+// @ts-ignore
 const CategoryCard = ({ title, icon, value, active }) => {
   return (
     <div

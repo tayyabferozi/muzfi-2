@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './components/pages/Home';
-import MainLayout from 'layouts/MainLayout';
-import Community from 'components/pages/Community';
-import ForSale from 'components/pages/For-Sale';
+import Community from './components/pages/Community';
+import ForSale from './components/pages/For-Sale';
+import MainLayout from './layouts/MainLayout';
 
 const AppRouter = () => {
   return (

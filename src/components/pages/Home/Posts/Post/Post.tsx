@@ -1,14 +1,13 @@
 import { useState } from 'react';
 
-import Card from 'components/common/Card';
-import friendlyTime from 'helpers/friendlyTime';
-
 import './Post.css';
-import GradientBtn from 'components/buttons/GradientBtn/GradientBtn';
 import clsx from 'clsx';
-import YellowBtn from 'components/buttons/YellowBtn/YellowBtn';
+import friendlyTime from '../../../../../helpers/friendlyTime';
+import GradientBtn from '../../../../buttons/GradientBtn';
+import YellowBtn from '../../../../buttons/YellowBtn';
+import Card from '../../../../common/Card';
 
-const Post = ({ el, idx }) => {
+const Post = ({ el, idx }: { el: any; idx: number }) => {
   const [isExpandedState, setIsExpandedState] = useState(false);
 
   return (
@@ -234,7 +233,7 @@ const Post = ({ el, idx }) => {
 
           {el.options && (
             <div className='mt-[18px]'>
-              {el.options.map((el2, idx2) => {
+              {el.options.map((el2: any, idx2: any) => {
                 return (
                   <div
                     className='flex items-center bg-accentGray-400 text-lg py-4 px-3 rounded-[10px] mb-[10px]'
@@ -345,7 +344,7 @@ const Post = ({ el, idx }) => {
 
       {el.imgs && (
         <div className='flex flex-wrap gap-2 mt-3 sm:flex-nowrap'>
-          {el.imgs?.map((el2, idx2) => {
+          {el.imgs?.map((el2: any, idx2: any) => {
             return (
               <div
                 className='relative flex-grow h-[74px]'
@@ -390,7 +389,7 @@ const Post = ({ el, idx }) => {
           </div>
         </div>
         <div className='flex gap-[14px]'>
-          {el.tags.map((el2, idx2) => {
+          {el.tags.map((el2: any, idx2: any) => {
             return (
               <div
                 key={'home-post-tags-star' + idx + '-' + idx2}

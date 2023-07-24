@@ -8,22 +8,22 @@ export default function News() {
   );
 }
 
-const Card = ({ idx }) => {
+const Card = ({ idx }: { idx: number }) => {
   return (
     <div>
       <div className='flex items-center gap-2.5 text-black'>
-        <p className='w-5  text-sm font-medium'>0{idx}</p>
+        <p className='w-5 text-sm font-medium'>0{idx}</p>
         <img
           alt=''
           className='w-[54px] h-[54px] rounded-[108.49px] shadow'
           src='https://via.placeholder.com/54x54'
         />
         <div>
-          <p className=' text-base font-semibold '>r/news</p>
+          <p className='text-base font-semibold '>r/news</p>
           <p className='w-[229px]  text-sm font-medium'>
             Learning and Education
           </p>
-          <p className='text-neutral-400 text-sm font-medium '>41M members</p>
+          <p className='text-sm font-medium text-neutral-400 '>41M members</p>
         </div>
       </div>
       <div className='flex mt-2'>

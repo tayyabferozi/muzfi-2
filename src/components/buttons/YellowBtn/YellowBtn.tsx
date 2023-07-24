@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
-const YellowBtn = ({ className, short, label }) => {
+const YellowBtn = ({
+  className,
+  short,
+  label,
+}: Partial<{
+  className: string;
+  short: boolean;
+  label: any;
+}>) => {
   return (
     <Link
       className={clsx(
