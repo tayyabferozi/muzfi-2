@@ -11,13 +11,13 @@ const Home = () => {
   /// ADD Member SignedIN Homepage(1-2. Homepage) with logic once user log's in
 
   return (
-    <div className='lg:flex gap-6'>
+    <div className='gap-6 lg:flex'>
       <div className='flex-grow min-[1700px]:max-w-[850px] 2xl:max-w-[700px] min-[1350px]:max-w-[675px] xl:max-w-[585px] min-[1150px]:max-w-[675px] lg:max-w-[600px] sm:w-[calc(100vw-48px)] w-[calc(100vw-48px)]  mx-auto'>
-        <div className='lg:hidden mb-5'>
+        <div className='mb-5 lg:hidden'>
           <Search />
         </div>
         <Categories />
-        <Feeds />
+        <Feeds feedTypes={feedTypes} />
         <Posts />
       </div>
     </div>
@@ -25,3 +25,42 @@ const Home = () => {
 };
 
 export default Home;
+
+const feedTypes = [
+  {
+    icon: '/assets/vectors/home/add.svg',
+    label: 'New',
+  },
+  {
+    icon: '/assets/vectors/home/hot.svg',
+    label: 'Hot',
+  },
+  {
+    icon: '/assets/vectors/home/topics.svg',
+    label: 'topics',
+  },
+  {
+    icon: '/assets/vectors/home/for-sale.svg',
+    label: 'For Sale',
+  },
+  {
+    icon: '/assets/vectors/home/new-gear.svg',
+    label: 'New Gear',
+  },
+  {
+    icon: '/assets/vectors/home/polls.svg',
+    label: 'Polls',
+  },
+  {
+    icon: '/assets/vectors/home/add.svg',
+    label: 'Latest',
+  },
+  {
+    icon: '/assets/vectors/home/add.svg',
+    label: 'Communities',
+  },
+  {
+    icon: '/assets/vectors/home/add.svg',
+    label: 'Reviews',
+  },
+];

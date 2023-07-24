@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from 'components/common/Sidebar';
 import Navbar from 'components/common/Navbar';
 import Explore from 'components/common/Explore';
+import Ad from 'components/common/Explore/ad';
 
 const MainLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -26,6 +27,7 @@ const MainLayout = () => {
         </div>
 
         <div className='2xl:w-[330px] xl:w-[300px] lg:w-[320px]  mx-auto lg:mr-[3rem] xl:mr-[3rem]'>
+          <Ad />
           <Explore />
         </div>
       </div>

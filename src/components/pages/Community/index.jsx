@@ -12,7 +12,7 @@ const Community = () => {
 
   return (
     <div>
-      <Category />
+      <Category category={category} />
       <Wrapper>
         <BrowseCategories />
         <Filter />
@@ -23,3 +23,10 @@ const Community = () => {
 };
 
 export default Community;
+
+const category = [
+  { title: 'Search by Category', icon: 'tabler:category', active: true },
+  { title: 'Brands', icon: 'eva:flash-outline' },
+  { title: 'Customs', icon: 'cil:filter' },
+  { title: 'My Gear Items', icon: 'bi:bag', value: '18' },
+];

@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import { cn } from 'helpers/utils';
 
-export default function Category() {
+export default function Category({ category }) {
   return (
     <section className='flex items-center gap-4'>
       {category.map((_) => (
@@ -10,13 +10,6 @@ export default function Category() {
     </section>
   );
 }
-
-const category = [
-  { title: 'Search by Category', icon: 'tabler:category', active: true },
-  { title: 'Brands', icon: 'eva:flash-outline' },
-  { title: 'Customs', icon: 'cil:filter' },
-  { title: 'My Gear Items', icon: 'bi:bag', value: '18' },
-];
 
 const CategoryCard = ({ title, icon, value, active }) => {
   return (

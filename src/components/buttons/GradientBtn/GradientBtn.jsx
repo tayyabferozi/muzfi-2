@@ -1,6 +1,4 @@
-import clsx from "clsx";
-
-import "./GradientBtn.css";
+import clsx from 'clsx';
 
 const GradientBtn = ({
   className,
@@ -16,13 +14,7 @@ const GradientBtn = ({
   return (
     <button
       className={clsx(
-        "gradient-btn  flex items-center justify-center",
-
-        lg
-          ? "h-[52px] py-3 px-[14px] gap-[10px] rounded-lg"
-          : veryShort
-          ? "py-1 px-[5px] gap-1 rounded-[3px]"
-          : "py-2 px-3 gap-[6px] rounded-lg",
+        'bg-gradient-to-l from-red-500 gap-1.5 to-yellow-500 text-white rounded-md px-3 h-10 flex items-center justify-center',
         className
       )}
     >
@@ -31,17 +23,9 @@ const GradientBtn = ({
           <img className={clsx(iconClassName)} src={icon} alt={label} />
         </div>
       )}
-      <div
-        className={clsx(
-          "btn-text text-white",
-          lg ? "font-bold text-lg" : "",
-          textLight ? "font-light" : "font-semibold",
-          textClassName,
-          textSm ? "text-[9px]" : "text-sm"
-        )}
-      >
+      <p className='text-sm font-semibold leading-tight text-gray-200 capitalize'>
         {label}
-      </div>
+      </p>
     </button>
   );
 };
