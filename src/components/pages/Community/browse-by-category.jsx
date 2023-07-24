@@ -14,77 +14,73 @@ const BrowseCategories = () => {
   const [prevEl, prevRef] = useSwiperRef();
 
   return (
-    <div className='gap-6 mt-8 lg:flex'>
-      <div className='flex-grow min-[1700px]:max-w-[850px] 2xl:max-w-[700px] min-[1350px]:max-w-[675px] xl:max-w-[585px] min-[1150px]:max-w-[675px] lg:max-w-[600px] sm:w-[calc(100vw-48px)] w-[calc(100vw-48px)]  mx-auto'>
-        <Card noMt>
-          <div className='flex justify-between w-full'>
-            <h4>Browse by Category</h4>
-            <div className='flex gap-1'>
-              <img
-                ref={prevRef}
-                className='cursor-pointer your-class-arrow your-class-prev'
-                src='/assets/vectors/common/arrow-left.svg'
-                alt='arrow left'
-              />
-              <img
-                ref={nextRef}
-                className='cursor-pointer your-class-arrow your-class-next'
-                src='/assets/vectors/common/arrow-right.svg'
-                alt='arrow right'
-              />
-            </div>
-          </div>
-
-          <div className='mt-[18px]'>
-            <div className=''>
-              <Swiper
-                modules={[Navigation]}
-                navigation={{
-                  prevEl,
-                  nextEl,
-                }}
-                spaceBetween={10}
-                breakpoints={{
-                  0: {
-                    slidesPerView: 3,
-                  },
-                  640: {
-                    slidesPerView: 10,
-                  },
-                  1480: {
-                    slidesPerView: 12,
-                  },
-                }}
-              >
-                {Array.from(Array(20)).map((el, idx) => {
-                  return (
-                    <SwiperSlide key={'home-category-slider-item' + idx}>
-                      <div className='flex flex-col items-center'>
-                        <div className='rounded-[50%] overflow-hidden w-[54px] h-[54px] relative'>
-                          <img
-                            className='absolute w-[76x] h-[76x]'
-                            src='/assets/vectors/home/slider-border.svg'
-                            alt='border'
-                          />
-                          <img
-                            className='rounded-[50%] w-[48px] h-[48px] absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4'
-                            src={category.img}
-                            alt='slider'
-                          />
-                        </div>
-                        <div className='mt-1 text-center font-medium text-[10px]'>
-                          {category.label}
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div>
-          </div>
-        </Card>
+    <Card noMt>
+      <div className='flex justify-between w-full'>
+        <h4>Browse by Category</h4>
+        <div className='flex gap-1'>
+          <img
+            ref={prevRef}
+            className='cursor-pointer your-class-arrow your-class-prev'
+            src='/assets/vectors/common/arrow-left.svg'
+            alt='arrow left'
+          />
+          <img
+            ref={nextRef}
+            className='cursor-pointer your-class-arrow your-class-next'
+            src='/assets/vectors/common/arrow-right.svg'
+            alt='arrow right'
+          />
+        </div>
       </div>
-    </div>
+
+      <div className='mt-[18px]'>
+        <div className=''>
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              prevEl,
+              nextEl,
+            }}
+            spaceBetween={10}
+            breakpoints={{
+              0: {
+                slidesPerView: 3,
+              },
+              640: {
+                slidesPerView: 10,
+              },
+              1480: {
+                slidesPerView: 12,
+              },
+            }}
+          >
+            {Array.from(Array(20)).map((el, idx) => {
+              return (
+                <SwiperSlide key={'home-category-slider-item' + idx}>
+                  <div className='flex flex-col items-center'>
+                    <div className='rounded-[50%] overflow-hidden w-[54px] h-[54px] relative'>
+                      <img
+                        className='absolute w-[76x] h-[76x]'
+                        src='/assets/vectors/common/outline.svg'
+                        alt='border'
+                      />
+                      <img
+                        className='rounded-[50%] w-[48px] h-[48px] absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4'
+                        src={category.img}
+                        alt='slider'
+                      />
+                    </div>
+                    <div className='mt-1 text-center font-medium text-[10px]'>
+                      {category.label}
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      </div>
+    </Card>
   );
 };
 
