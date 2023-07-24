@@ -5,6 +5,9 @@ import Reviews from './Reviews';
 import Reviews2 from './Reviews2';
 import { Link } from 'react-router-dom';
 import Ad from './ad';
+import { useLocation } from 'react-router-dom';
+import ExploreMenu from 'components/pages/For-Sale/explore-menu';
+import { Ruler } from '../ruler';
 
 const links = [
   'About Us',
@@ -16,13 +19,18 @@ const links = [
 ];
 
 const Explore = () => {
+  const { pathname } = useLocation();
   return (
     <Card className='rounded-b-none lg:h-full lg:mt-0'>
-      <TopGearRooms />
+      {pathname === '/for-sale' ? (
+        <ExploreMenu />
+      ) : (
+        <>
+          <TopGearRooms />
+        </>
+      )}
 
-      <div className='my-6'>
-        <hr />
-      </div>
+      <Ruler />
 
       <SubCommunities />
 
@@ -34,15 +42,11 @@ const Explore = () => {
 
       <img className='w-full mt-4' src='/assets/imgs/home/ad-3.png' alt='ad' />
 
-      <div className='my-6'>
-        <hr />
-      </div>
+      <Ruler />
 
       <Reviews />
 
-      <div className='my-6'>
-        <hr />
-      </div>
+      <Ruler />
 
       <img className='mx-auto' src='/assets/imgs/home/users.png' alt='users' />
       <div className='mt-[18px] flex items-center justify-center gap-2'>
@@ -51,9 +55,7 @@ const Explore = () => {
       </div>
       <div className='font-medium text-center'>Active now on your profile</div>
 
-      <div className='my-6'>
-        <hr />
-      </div>
+      <Ruler />
 
       <div className='flex flex-wrap justify-center gap-6'>
         {links.map((el, idx) => {
