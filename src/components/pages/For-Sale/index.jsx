@@ -1,6 +1,7 @@
 import Wrapper from 'layouts/MainLayout/wrapper';
 import Category from '../Community/category';
 import Feeds from '../Home/Feeds/Feeds';
+import Posts from '../Home/Posts/Posts';
 
 export default function ForSale() {
   return (
@@ -9,6 +10,7 @@ export default function ForSale() {
       <Wrapper>
         <Feeds feedTypes={feedTypes} />
       </Wrapper>
+      <Posts />
     </section>
   );
 }

@@ -18,7 +18,7 @@ const CategoryCard = ({ title, icon, value, active }) => {
       className={cn(
         'text-sm font-semibold flex items-center gap-2.5 box-border  bg-zinc-100 capitalize text-neutral-400 border border-slate-400 px-2.5 py-3 rounded-lg',
         {
-          'bg-gradient-to-l from-red-500 to-yellow-500 text-white border-0':
+          'bg-gradient-to-l from-red-500 to-yellow-500 text-white py-3.5 border-0':
             active,
         }
       )}

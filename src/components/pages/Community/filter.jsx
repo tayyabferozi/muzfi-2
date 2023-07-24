@@ -2,11 +2,12 @@ import { Icon } from '@iconify/react';
 
 export default function Filter() {
   return (
-    <section className='flex flex-wrap justify-between my-8'>
+    <section className='grid grid-cols-2 gap-3 my-8 md:grid-cols-4'>
       {data.map((_) => (
         <div
+          role='button'
           key={_.label}
-          className='bg-white border p-3 gap-1 rounded-lg max-w-[167px] w-full border-slate-200'
+          className='gap-1 p-3 bg-white border rounded-lg basis-1/4 border-slate-200'
         >
           <div className='flex items-center gap-1'>
             <Icon icon='carbon:location' className='text-lg text-zinc-500' />
