@@ -4,7 +4,6 @@ import SubCommunities from './SubCommunities/SubCommunities';
 import Reviews from './Reviews';
 import Reviews2 from './Reviews2';
 import { Link } from 'react-router-dom';
-import Ad from './ad';
 import { useLocation } from 'react-router-dom';
 import ExploreMenu from 'components/pages/For-Sale/explore-menu';
 import { Ruler } from '../ruler';

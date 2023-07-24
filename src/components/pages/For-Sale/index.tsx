@@ -1,4 +1,4 @@
-import Wrapper from 'layouts/MainLayout/wrapper';
+import Wrapper from '../../../layouts/MainLayout/wrapper';
 import Category from '../Community/category';
 import Feeds from '../Home/Feeds/Feeds';
 import Posts from '../Home/Posts/Posts';
