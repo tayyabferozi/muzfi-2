@@ -1,3 +1,7 @@
+import { Icon } from '@iconify/react';
+import LightBlueBtn from 'components/buttons/LightBlueBtn/LightBlueBtn';
+import YellowBtn from 'components/buttons/YellowBtn/YellowBtn';
+
 export default function Moderators() {
   return (
     <section>
@@ -7,6 +11,16 @@ export default function Moderators() {
           <p className='text-sm font-medium'>{_}</p>
         ))}
       </div>
+      <YellowBtn
+        className={'my-5'}
+        label={
+          <div className='flex items-center gap-1'>
+            <Icon icon={'ic:outline-email'} />
+            Message the mods
+          </div>
+        }
+      />
+      <LightBlueBtn label={'View All Moderators'} />
     </section>
   );
 }
