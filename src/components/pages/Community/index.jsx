@@ -1,5 +1,6 @@
 import React from 'react';
 import Category from './category';
+import BrowseCategories from './browse-by-category';
 
 const Community = () => {
   // ADD Communities Page(2. Browse Communities) Here ----- This is the "Browse" Tab on Left Panel
@@ -9,6 +10,7 @@ const Community = () => {
   return (
     <div>
       <Category />
+      <BrowseCategories />
     </div>
   );
 };
