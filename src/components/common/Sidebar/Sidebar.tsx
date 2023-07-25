@@ -9,7 +9,7 @@ const navItems = [
   {
     to: '/browse',
     icon: '/assets/imgs/home/singers.png',
-    label: 'Browse',
+    label: 'Communities',
   },
   {
     to: '/for-sale',

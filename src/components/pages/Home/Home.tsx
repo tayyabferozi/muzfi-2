@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Search from '../../common/Search/Search';
 import Categories from './Categories';
 import Feeds from './Feeds';
@@ -11,16 +13,11 @@ const Home = () => {
   /// ADD Member SignedIN Homepage(1-2. Homepage) with logic once user log's in
 
   return (
-    <div className='gap-6 lg:flex'>
-      <div className='flex-grow min-[1700px]:max-w-[850px] 2xl:max-w-[700px] min-[1350px]:max-w-[675px] xl:max-w-[585px] min-[1150px]:max-w-[675px] lg:max-w-[600px] sm:w-[calc(100vw-48px)] w-[calc(100vw-48px)]  mx-auto'>
-        <div className='mb-5 lg:hidden'>
-          <Search />
-        </div>
-        <Categories />
-        <Feeds feedTypes={feedTypes} />
-        <Posts />
-      </div>
-    </div>
+    <React.Fragment>
+      <Categories />
+      <Feeds feedTypes={feedTypes} />
+      <Posts />
+    </React.Fragment>
   );
 };
 

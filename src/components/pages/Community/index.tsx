@@ -1,9 +1,10 @@
 import React from 'react';
 import Category from './category';
-import BrowseCategories from './browse-by-category';
+
 import Filter from './filter';
 import News from './news';
 import Wrapper from '../../../layouts/MainLayout/wrapper';
+import Categories from '../Home/Categories';
 
 const Community = () => {
   // ADD Communities Page(2. Browse Communities) Here ----- This is the "Browse" Tab on Left Panel
@@ -14,7 +15,7 @@ const Community = () => {
     <div>
       <Category category={category} />
       <Wrapper>
-        <BrowseCategories />
+        <Categories />
         <Filter />
         <News />
       </Wrapper>
