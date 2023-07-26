@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const index = () => {
+const Polls = () => {
   // ADD Create Poll Post Page Sequence Here (Figma: 7. Create Thread: POLLS)
 
   return <div>index</div>;
-}
+};
 
-export default index
+export default Polls;

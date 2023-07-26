@@ -1,4 +1,5 @@
 import GradientBtn from '../../buttons/GradientBtn';
+import CreatePost from './create-post-popover';
 
 const Search = () => {
   return (
@@ -15,13 +16,15 @@ const Search = () => {
           placeholder='Search...'
         />
       </div>
-      <GradientBtn
-        iconClassName='w-5 h-5'
-        textClassName='text-sm'
-        className='flex-shrink-0 h-[40px]'
-        icon='/assets/vectors/common/add-white.svg'
-        label=' New Post'
-      />
+      <CreatePost>
+        <GradientBtn
+          iconClassName='w-5 h-5'
+          textClassName='text-sm'
+          className='flex-shrink-0 h-[40px]'
+          icon='/assets/vectors/common/add-white.svg'
+          label=' New Post'
+        />
+      </CreatePost>
     </div>
   );
 };
