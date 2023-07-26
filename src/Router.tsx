@@ -8,6 +8,7 @@ import Listing from './components/pages/Create-Post/Listing';
 import Topic from './components/pages/Create-Post/Topic';
 import NewGear from './components/pages/Create-Post/NewGear';
 import Polls from './components/pages/Create-Post/Polls';
+import TabsWrapper from './layouts/MainLayout/tabs-wrapper';
 
 const AppRouter = () => {
   return (
@@ -17,10 +18,12 @@ const AppRouter = () => {
           <Route index element={<Home />} />
           <Route path='/browse' element={<Community />} />
           <Route path='/for-sale' element={<ForSale />} />
-          <Route path='/my-gearroom/listing' element={<Listing />} />
-          <Route path='/my-gearroom/topic' element={<Topic />} />
-          <Route path='/my-gearroom/new-gear' element={<NewGear />} />
-          <Route path='/my-gearroom/polls' element={<Polls />} />
+          <Route path='/my-gearroom' element={<TabsWrapper />}>
+            <Route path='/my-gearroom/listing' element={<Listing />} />
+            <Route path='/my-gearroom/topic' element={<Topic />} />
+            <Route path='/my-gearroom/new-gear' element={<NewGear />} />
+            <Route path='/my-gearroom/polls' element={<Polls />} />
+          </Route>
         </Route>
       </Routes>
     </Router>
