@@ -1,6 +1,8 @@
 import { Icon } from '@iconify/react';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import { TextField } from '../../../text-field';
+import GreyBtn from '../../../buttons/GreyBtn';
+import YellowBtn from '../../../buttons/YellowBtn';
 
 const Topic = () => {
   // ADD Create Topic Post Page Sequences Here (Figma: 7. Create Thread: TOPIC)
@@ -35,6 +37,15 @@ const Topic = () => {
         ))}
       </ToggleGroup.Root>
       <TextField />
+      <div className='flex gap-3'>
+        {tags.map((_) => (
+          <GreyBtn label={'+ ' + _.label} />
+        ))}
+      </div>
+      <div className='flex gap-4 my-8'>
+        <GreyBtn label={'Cancel'} />
+        <YellowBtn label={'Save'} className='px-6' />
+      </div>
     </>
   );
 };
@@ -53,5 +64,20 @@ const data = [
   {
     label: 'Link',
     icon: 'ph:link-bold',
+  },
+];
+
+const tags = [
+  {
+    label: 'OC',
+  },
+  {
+    label: 'Spoiler',
+  },
+  {
+    label: 'OC',
+  },
+  {
+    label: 'Spoiler',
   },
 ];
