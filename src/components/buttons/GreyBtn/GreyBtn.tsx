@@ -7,7 +7,7 @@ const GreyBtn = ({
   label,
 }: {
   className?: any;
-  short: any;
+  short?: any;
   label: any;
 }) => {
   return (

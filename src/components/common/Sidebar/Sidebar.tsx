@@ -1,11 +1,17 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 
 import './Sidebar.css';
 import GradientBtn from '../../buttons/GradientBtn';
+import { cn } from '../../../helpers/utils';
 
 const navItems = [
   { to: '/', icon: '/assets/imgs/home/home.png', label: 'Home' },
+  {
+    to: '/my-gearroom',
+    icon: '/assets/imgs/home/gearroom.svg',
+    label: 'My GearRoom',
+  },
   {
     to: '/browse',
     icon: '/assets/imgs/home/singers.png',
@@ -59,6 +65,7 @@ const Sidebar = ({
   isSidebarOpen: any;
   setIsSidebarOpen: any;
 }>) => {
+  const { pathname } = useLocation();
   return (
     <div
       className={clsx(
@@ -99,7 +106,11 @@ const Sidebar = ({
                   />
                   <div className=''>
                     <img
-                      className='w-[30px] h-[30px] '
+                      className={cn('w-[30px] h-[30px] ', {
+                        invert:
+                          pathname.includes('gearroom') &&
+                          el.label.includes('GearRoom'),
+                      })}
                       src={el.icon}
                       alt={el.label}
                     />
