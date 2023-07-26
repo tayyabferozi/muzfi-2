@@ -7,6 +7,11 @@ import GradientBtn from '../../buttons/GradientBtn';
 const navItems = [
   { to: '/', icon: '/assets/imgs/home/home.png', label: 'Home' },
   {
+    to: '/my-gearroom',
+    icon: '/assets/imgs/home/gearroom.svg',
+    label: 'My GearRoom',
+  },
+  {
     to: '/browse',
     icon: '/assets/imgs/home/singers.png',
     label: 'Communities',
