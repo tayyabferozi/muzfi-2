@@ -3,21 +3,25 @@ import { cn } from '../../helpers/utils';
 
 interface InputProps extends HtmlHTMLAttributes<HTMLInputElement> {
   wrapperClassName?: string;
+  noLabel?: boolean;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, wrapperClassName, ...props }, ref) => {
+  ({ className, wrapperClassName, noLabel, ...props }, ref) => {
     const id = useId();
     return (
       <div className={cn('', wrapperClassName)}>
-        <label htmlFor={id}>
-          <span className='text-[11px] font-semibold mb-1'>
-            {props['aria-label'] || props.placeholder}{' '}
-          </span>
-          {props['aria-required'] && (
-            <span className='text-red-600 text-[11px] font-semibold'>*</span>
-          )}
-        </label>
+        {!noLabel && (
+          <label htmlFor={id}>
+            <span className='text-[11px] font-semibold mb-1'>
+              {props['aria-label'] || props.placeholder}{' '}
+            </span>
+            {props['aria-required'] && (
+              <span className='text-red-600 text-[11px] font-semibold'>*</span>
+            )}
+          </label>
+        )}
+
         <div>
           <input
             id={id}
