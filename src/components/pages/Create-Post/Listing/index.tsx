@@ -33,29 +33,6 @@ const Listing = () => {
           <YellowBtn className='px-6 my-8 w-max' label={'Continue'} />
         </div>
       </div>
-      <div className=' flex items-center p-2.5 bg-zinc-100 rounded-lg justify-between'>
-        <div className='flex items-center gap-2.5 cursor-pointer'>
-          <input
-            type='checkbox'
-            defaultChecked
-            id='notifications'
-            className='checked:accent-blue-500'
-          />
-          <label
-            htmlFor='notifications'
-            className='text-sm font-normal text-black cursor-pointer'
-          >
-            Send me post reply notifications
-          </label>
-        </div>
-        <a
-          href='/'
-          className='flex items-center gap-2 text-sm font-medium text-right text-blue-700'
-        >
-          Connect accounts to share your post{' '}
-          <img src='/assets/vectors/common/info.svg' alt='' />
-        </a>
-      </div>
     </>
   );
 };

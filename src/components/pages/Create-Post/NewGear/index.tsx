@@ -24,12 +24,13 @@ const NewGear = () => {
       <GreyBtn className={'w-max px-6 my-3'} label={'+ Create Avatar'} />
       <div
         onClick={() => inputRef.current?.click()}
-        className='flex flex-col items-center justify-center [&_*]:cursor-pointer cursor-pointer h-36 bg-[#FBBC0515]'
+        className='flex flex-col items-center justify-center border rounded-lg border-dashed border-accentYellow-500 [&_*]:cursor-pointer cursor-pointer h-36 bg-[#FBBC0515]'
       >
         <img src='/assets/vectors/common/upload.svg' alt='' />
-        <p className='text-[#FBBC05] font-semibold'>+ Upload Photo</p>
+        <p className='font-semibold text-accentYellow-500'>+ Upload Photo</p>
       </div>
       <input type='file' className='hidden' ref={inputRef} />
+      <br />
     </div>
   );
 };
