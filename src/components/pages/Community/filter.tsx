@@ -21,8 +21,8 @@ export default function Filter() {
 }
 
 const data = [
-  { label: 'Sub', desc: 'Gibson Les Paul' },
-  { label: 'Type', desc: 'None' },
+  { label: 'Fitler', desc: 'Top' }, // Size, latest, hot market, age,  etc
+  { label: 'Sub', desc: 'Gibson Les Paul' }, 
   { label: 'Genre', desc: 'None' },
-  { label: 'Create Community', desc: 'Maple' },
+  { label: 'Type', desc: 'Public' },
 ];

@@ -26,8 +26,8 @@ const Community = () => {
 export default Community;
 
 const category = [
-  { title: 'Search by Category', icon: 'tabler:category', active: true },
-  { title: 'Brands', icon: 'eva:flash-outline' },
-  { title: 'Customs', icon: 'cil:filter' },
-  { title: 'My Gear Items', icon: 'bi:bag', value: '18' },
+  { title: "Create", icon: "tabler:category", active: true },
+  { title: "See Brands", icon: "eva:flash-outline" },
+  { title: "Search by Category", icon: "cil:filter" },
+  { title: "My Communities", icon: "bi:bag", value: "18" },
 ];

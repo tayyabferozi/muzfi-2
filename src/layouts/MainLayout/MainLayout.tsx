@@ -4,9 +4,17 @@ import Explore from '../../components/common/Explore';
 import Ad from '../../components/common/Explore/ad';
 import Navbar from '../../components/common/Navbar';
 import Sidebar from '../../components/common/Sidebar';
+import Auth from "../../components/auth/Auth";
+import { useAppSelector} from "../../redux/hooks";
 
 const MainLayout = () => {
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  const hidden = useAppSelector((state) => state.authPopup);
+  const type = useAppSelector((state) => state.authType);
+  console.log(hidden);
+
 
   return (
     <div className="overflow-hidden ">
@@ -20,8 +28,8 @@ const MainLayout = () => {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
-
-        <div className="flex-grow xl:pl-6 pl-0 pb-0 px-[10px] lg:mr-[rem] xl:mr-[1rem] 2xl:mr-[-5rem]">
+        <Auth isModalActive={hidden.value} type={type.value} />
+        <div className="flex-grow xl:pl-6 pl-0 pb-0 px-[10px] lg:mr-[rem] ">
           <div className="gap-6 lg:flex">
             <div className="flex-grow min-[1700px]:max-w-[850px] 2xl:max-w-[700px] min-[1350px]:max-w-[675px] xl:max-w-[585px] min-[1150px]:max-w-[675px] lg:max-w-[600px] sm:w-[calc(100vw-48px)] w-[calc(100vw-48px)]  mx-auto">
               {/* <div className='mb-5 lg:hidden'>
