@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import GreyBtn from '../../../buttons/GreyBtn/GreyBtn';
 import { TextField } from '../../../text-field';
+import Select from '../../../common/select';
+import YellowBtn from '../../../buttons/YellowBtn/YellowBtn';
 
 const NewGear = () => {
   // ADD Create New GearPost Page Sequence Here (FIGMA: 7. Create Thread: NEWGEAR)
@@ -33,8 +35,63 @@ const NewGear = () => {
       <input type='file' className='hidden' ref={inputRef} />
       <br />
       <TextField />
+      <div className='flex'>
+        {data.map((_) => (
+          <div key={_.label}>
+            <p className=' text-[11px] font-semibold mb-1'>
+              How’d you receive it?
+            </p>
+            <Select options={_.options} placeholder={_.placeholder} />
+          </div>
+        ))}
+      </div>
+      <div className='grid grid-cols-4 gap-2 my-10'>
+        {data2.map((_) => (
+          <div className='rounded-md bg-yellow-500/10 p-2.5 '>
+            <p className='text-[11px] font-semibold'>{_.label}</p>
+            <p className=' text-[10px] '>
+              hb sdjbchjbhjbsdjh jhb hj hj hj jh hbhujbhb hb hjbhjbh jbhujb
+              hbsdfdsv sdv sdvsd vsvdvvdvsdv sdvsdvv.
+            </p>
+            <div className='flex justify-between mt-2'>
+              {Array.from(Array(5).keys()).map((_) => (
+                <div
+                  className='w-[26px] h-[26px] bg-gray-800 text-white grid place-content-center font-semibold rounded-full'
+                  key={_}
+                >
+                  {_ + 1}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className='flex gap-4 my-8'>
+        <GreyBtn label={'Cancel'} />
+        <YellowBtn label={'Save'} className='px-6' />
+      </div>
     </div>
   );
 };
 
 export default NewGear;
+
+const data = [
+  {
+    label: 'How’d you receive it?',
+    placeholder: 'Select 1',
+    options: [{ label: 'hello' }, { label: 'world' }],
+  },
+];
+const data2 = [
+  {
+    label: 'Usability Rating',
+    placeholder:
+      'hb sdjbchjbhjbsdjh jhb  hj hj hj jh hbhujbhb hb hjbhjbh jbhujb hbsdfdsv sdv sdvsd vsvdvvdvsdv sdvsdvv.',
+  },
+  {
+    label: 'Usability Rating',
+    placeholder:
+      'hb sdjbchjbhjbsdjh jhb  hj hj hj jh hbhujbhb hb hjbhjbh jbhujb hbsdfdsv sdv sdvsd vsvdvvdvsdv sdvsdvv.',
+  },
+];

@@ -7,7 +7,7 @@ export default function Select({
 }: {
   options: {
     label: string;
-    action: string;
+    action?: string;
   }[];
 } & HtmlHTMLAttributes<HTMLDivElement>) {
   const [value, setValue] = useState(props.placeholder);
