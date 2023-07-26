@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import GreyBtn from '../../../buttons/GreyBtn/GreyBtn';
+import { TextField } from '../../../text-field';
 
 const NewGear = () => {
   // ADD Create New GearPost Page Sequence Here (FIGMA: 7. Create Thread: NEWGEAR)
@@ -31,6 +32,7 @@ const NewGear = () => {
       </div>
       <input type='file' className='hidden' ref={inputRef} />
       <br />
+      <TextField />
     </div>
   );
 };
