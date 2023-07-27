@@ -26,11 +26,11 @@ const AppRouter = () => {
           <Route path="/browse/single" element={<CommunityPage />} />
           
           <Route path="/for-sale" element={<ForSale />} />
-          <Route path="/my-gearroom" element={<TabsWrapper />}>
-            <Route path="/my-gearroom/listing" element={<Listing />} />
-            <Route path="/my-gearroom/topic" element={<Topic />} />
-            <Route path="/my-gearroom/new-gear" element={<NewGear />} />
-            <Route path="/my-gearroom/polls" element={<Polls />} />
+          <Route path="/create" element={<TabsWrapper />}>
+            <Route path="/create/listing" element={<Listing />} />
+            <Route path="/create/topic" element={<Topic />} />
+            <Route path="/create/new-gear" element={<NewGear />} />
+            <Route path="/create/polls" element={<Polls />} />
           </Route>
 
           {/* <Route path="/auth" element={<Auth isModalActive={hidden.value} />} /> */}

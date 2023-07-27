@@ -29,7 +29,7 @@ const posts = [
       '/assets/imgs/home/prod-img-3.png',
       '/assets/imgs/home/prod-img-4.png',
     ],
-    likes: '1.54 k',
+    likes: '1.58 k',
     comments: '2.34 k',
     tags: ['Bass', '5 String'],
   },

@@ -5,7 +5,7 @@ const CreatePost = ({ children }: { children: React.ReactNode }) => (
     <Popover.Trigger>{children}</Popover.Trigger>
     <Popover.Anchor />
     <Popover.Portal>
-      <Popover.Content className='z-50 w-52  rounded shadow bg-gradient-to-l right-0 from-red-500 to-yellow-500 p-0.5'>
+      <Popover.Content className='z-50 w-30 rounded shadow bg-gradient-to-l right-0 from-red-500 to-yellow-500 p-0.5'>
         <div className='px-4 py-3 space-y-2 bg-white rounded'>
           {data.map((_) => (
             <Link
@@ -30,18 +30,18 @@ export default CreatePost;
 const data = [
   {
     label: 'topic',
-    href: '/my-gearroom/topic',
+    href: '/create/topic',
   },
   {
     label: 'listing',
-    href: '/my-gearroom/listing',
+    href: '/create/listing',
   },
   {
     label: 'new gear',
-    href: '/my-gearroom/new-gear',
+    href: '/create/new-gear',
   },
   {
     label: 'polls',
-    href: '/my-gearroom/polls',
+    href: '/create/polls',
   },
 ];
