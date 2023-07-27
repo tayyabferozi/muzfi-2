@@ -6,7 +6,8 @@ import GradientBtn from '../../buttons/GradientBtn';
 import { cn } from '../../../helpers/utils';
 import Resources from './Resources';
 import SidebarItems from './SidebarItems';
-import SidebarButtons from './SidebarButtons';
+
+import SidebarPanel from './SidebarPanel';
 
 
 
@@ -34,7 +35,7 @@ const Sidebar = ({
         >
           &times;
         </div>
-            <SidebarButtons/>
+            <SidebarPanel/>
         <div className='px-6 mt-4 rounded-lg py-3 bg-primary'>
           <Resources/>
         </div>

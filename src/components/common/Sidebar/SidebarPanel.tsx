@@ -2,7 +2,7 @@ import React from 'react'
 import SidebarItems from "./SidebarItems";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import GradientBtn from "../../buttons/GradientBtn";
-const SidebarButtons = () => {
+const SidebarPanel = () => {
   return (
     <div className="px-3 rounded-lg py-4 bg-primary">
       <Link className="block mb-6 xl:hidden" to="/">
@@ -35,4 +35,4 @@ const SidebarButtons = () => {
   );
 }
 
-export default SidebarButtons
+export default SidebarPanel
