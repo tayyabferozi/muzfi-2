@@ -4,7 +4,7 @@ const posts = [
   {
     newGear: true,
     goodCondition: true,
-    type: 'prod-sale',
+    type: 'prod-gear',
     userImg: '/assets/imgs/home/user-img.png',
     username: 'r/buybass',
     time: new Date().setDate(new Date().getDate() - 2),
@@ -37,7 +37,7 @@ const posts = [
     ad: 'assets/imgs/home/ad-4.png',
   },
   {
-    type: 'prod-bid',
+    type: 'prod-sale',
     userImg: '/assets/imgs/home/user-img.png',
     username: 'r/buybass',
     time: new Date().setDate(new Date().getDate() - 2),
@@ -64,7 +64,7 @@ const posts = [
     tags: ['Bass', '5 String'],
   },
   {
-    type: 'normal',
+    type: 'prod-topic',
     userImg: '/assets/imgs/home/user-img.png',
     username: 'r/buybass',
     time: new Date().setDate(new Date().getDate() - 2),
@@ -82,7 +82,7 @@ const posts = [
     tags: ['Bass', '5 String'],
   },
   {
-    type: 'poll',
+    type: 'prod-poll',
     userImg: '/assets/imgs/home/user-img.png',
     username: 'r/buybass',
     time: new Date().setDate(new Date().getDate() - 2),
@@ -104,7 +104,7 @@ const posts = [
     ad: 'assets/imgs/home/ad-4.png',
   },
   {
-    type: 'prod-bid',
+    type: 'prod-sale',
     brownBtns: true,
     userImg: '/assets/imgs/home/user-img.png',
     username: 'r/buybass',
