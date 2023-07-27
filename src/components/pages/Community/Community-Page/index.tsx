@@ -1,7 +1,7 @@
 import Wrapper from "../../../../layouts/MainLayout/wrapper";
 import Category from "../Category";
 import Feeds from "../../Home/Feeds/Feeds";
-import Posts from "../../Home/Posts/Posts";
+import Posts from "../../Home/Posts";
 
 export default function CommunityPage() {
   return (

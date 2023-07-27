@@ -23,7 +23,7 @@ const Explore = () => {
   const { pathname } = useLocation();
   const content = useMemo(() => {
     switch (true) {
-      case pathname.includes("for-sale"):
+      case pathname.includes("browse"):
         return <ExploreMenu />;
       case pathname.includes("gearroom"):
         return <Profile />;

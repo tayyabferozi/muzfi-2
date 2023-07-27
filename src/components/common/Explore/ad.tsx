@@ -35,7 +35,7 @@ const routes = [
     caption: 'Find, Build, and connect with like minded Peers',
   },
   {
-    pathname: '/for-sale',
+    pathname: '/browse/single',
     head: 'B/ TeamFBASS',
     caption: 'Find, Build, and connect with like minded Peers',
   },
