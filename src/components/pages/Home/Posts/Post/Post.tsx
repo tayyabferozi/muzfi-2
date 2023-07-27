@@ -69,7 +69,7 @@ const Post = ({ el, idx }: { el: any; idx: number }) => {
                 ({el.authorReviewsCount})
               </div>
             </div>
-            {(el.type === 'prod-bid' || el.type === 'prod-sale') && (
+            {(el.type === 'prod-sale' || el.type === 'prod-gear') && (
               <div className='text-accentGray-700 text-[10px] font-medium mt-1'>
                 {el.location}
               </div>
@@ -81,13 +81,13 @@ const Post = ({ el, idx }: { el: any; idx: number }) => {
           </div>
         </div>
         <div className='flex flex-col items-end justify-center'>
-          {el.type === 'prod-sale' || el.type === 'prod-bid' ? (
-            el.type !== 'prod-bid' && (
+          {el.type === 'prod-gear' || el.type === 'prod-sale' ? (
+            el.type !== 'prod-sale' && (
               <div className='flex items-center gap-[14px]'>
                 <img
                   className='w-9 h-9'
                   src={`/assets/vectors/home/${
-                    el.type === 'prod-sale' ? 'lock-1' : 'lock-2'
+                    el.type === 'prod-gear' ? 'lock-1' : 'lock-2'
                   }.svg`}
                   alt='lock'
                 />
@@ -114,7 +114,7 @@ const Post = ({ el, idx }: { el: any; idx: number }) => {
         {el.location}
       </div>
 
-      {el.type === 'prod-sale' && (
+      {el.type === 'prod-gear' && (
         <>
           <div className='mt-7'>
             <div className='text-center'>
@@ -192,7 +192,7 @@ const Post = ({ el, idx }: { el: any; idx: number }) => {
         </>
       )}
 
-      {el.type !== 'prod-sale' && el.type !== 'prod-bid' && (
+      {el.type !== 'prod-gear' && el.type !== 'prod-sale' && (
         <>
           {el.postTitle && (
             <div className='mt-3 text-2xl font-medium'>{el.postTitle}</div>
@@ -259,7 +259,7 @@ const Post = ({ el, idx }: { el: any; idx: number }) => {
         </>
       )}
 
-      {el.type === 'prod-bid' && (
+      {el.type === 'prod-sale' && (
         <>
           <div className='flex justify-center pt-9'>
             <div>
@@ -366,7 +366,7 @@ const Post = ({ el, idx }: { el: any; idx: number }) => {
         </div>
       )}
 
-      {el.type === 'poll' && (
+      {el.type === 'prod-poll' && (
         <div className='flex items-center justify-between mt-2'>
           <div className='text-sm font-medium text-accentGray-700'>
             {el.votesCount} votes
