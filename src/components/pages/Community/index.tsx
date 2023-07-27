@@ -1,10 +1,10 @@
-import React from 'react';
-import Category from './category';
+import React from "react";
+import Category from "./Category";
 
-import Filter from './filter';
-import News from './news';
-import Wrapper from '../../../layouts/MainLayout/wrapper';
-import Categories from '../Home/Categories';
+import Filter from "./Filter";
+import CommunityItems from "./CommunityItems";
+import Wrapper from "../../../layouts/MainLayout/wrapper";
+import Categories from "../Home/Categories";
 
 const Community = () => {
   // ADD Communities Page(2. Browse Communities) Here ----- This is the "Browse" Tab on Left Panel
@@ -17,7 +17,7 @@ const Community = () => {
       <Wrapper>
         <Categories />
         <Filter />
-        <News />
+        <CommunityItems />
       </Wrapper>
     </div>
   );
