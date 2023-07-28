@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
 import GreyBtn from '../../../buttons/GreyBtn/GreyBtn';
-import { TextField } from '../../../text-field';
-import Select from '../../../common/select';
 import YellowBtn from '../../../buttons/YellowBtn/YellowBtn';
+import Select from '../../../common/select';
+import Uploader from '../../../common/uploader';
+import { TextField } from '../../../text-field';
 
 const NewGear = () => {
   // ADD Create New GearPost Page Sequence Here (FIGMA: 7. Create Thread: NEWGEAR)
-  const inputRef = useRef<HTMLInputElement>(null);
 
   return (
     <div className=''>
@@ -25,14 +24,8 @@ const NewGear = () => {
         Cant find your gear Add yours and help grow our database for others{' '}
       </p>
       <GreyBtn className={'w-max px-6 my-3'} label={'+ Create Avatar'} />
-      <div
-        onClick={() => inputRef.current?.click()}
-        className='flex flex-col items-center justify-center border rounded-lg border-dashed border-accentYellow-500 [&_*]:cursor-pointer cursor-pointer h-36 bg-[#FBBC0515]'
-      >
-        <img src='/assets/vectors/common/upload.svg' alt='' />
-        <p className='font-semibold text-accentYellow-500'>+ Upload Photo</p>
-      </div>
-      <input type='file' className='hidden' ref={inputRef} />
+      <Uploader />
+
       <br />
       <TextField />
       <div className='flex'>

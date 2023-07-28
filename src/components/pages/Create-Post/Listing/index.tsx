@@ -1,6 +1,7 @@
 import * as Tabs from '@radix-ui/react-tabs';
 import { ProductInfo } from './product-info';
 import { Icon } from '@iconify/react';
+import Description from './description';
 
 const Listing = () => {
   // ADD Create Listing Page Sequence Here (7. Create Thread: LISTING)
@@ -14,6 +15,9 @@ const Listing = () => {
           <div className='col-span-3 pr-2.5'>
             <Tabs.Content value='Product Info'>
               <ProductInfo />
+            </Tabs.Content>
+            <Tabs.Content value='Photos & Description'>
+              <Description />
             </Tabs.Content>
           </div>
           <Tabs.List className='border-l pl-1.5 flex flex-col gap-20 relative items-start h-fit border-slate-400/20'>
