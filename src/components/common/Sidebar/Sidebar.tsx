@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { useLocation } from 'react-router-dom';
 
 import Resources from './Resources';
 import './Sidebar.css';
@@ -13,11 +12,10 @@ const Sidebar = ({
   isSidebarOpen: any;
   setIsSidebarOpen: any;
 }>) => {
-  const { pathname } = useLocation();
   return (
     <div
       className={clsx(
-        'sticky  self-start  bg-accentGray-500 top-28 overflow-auto xl:h-[unset] h-full w-[210px]  flex-shrink-0 ',
+        'fixed bg-accentGray-500 top-[70px] xl:static xl:h-[unset] h-[calc(100vh-70px)] z-10 w-[210px] overflow-auto flex-shrink-0 ',
         isSidebarOpen ? 'left-0' : '-left-[300px]'
       )}
       id='main-layout-sidebar'
