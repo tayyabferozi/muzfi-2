@@ -10,22 +10,24 @@ import NewGear from "./components/pages/Create-Post/NewGear";
 import Polls from "./components/pages/Create-Post/Polls";
 import TabsWrapper from "./layouts/MainLayout/tabs-wrapper";
 
-import Auth from "./components/auth/Auth";
-import { useAppSelector } from "./redux/hooks";
+
 import ForSale from "./components/pages/Market";
+import GearCatalog from "./components/pages/Gear-Catalog";
 
 const AppRouter = () => {
-  const hidden = useAppSelector((state) => state.authPopup);
+
   return (
     <Router>
+      
       <Routes>
         <Route path="/" element={<MainLayout />}>
+          {/* <Route path='/auth' element={<Auth isModalActive={hidden.value} type={type.value} />}/> */}
           <Route index element={<Home />} />
-
           <Route path="/browse" element={<Community />} />
           <Route path="/browse/single" element={<CommunityPage />} />
-          
+
           <Route path="/for-sale" element={<ForSale />} />
+          <Route path="/gear-catalog" element={<GearCatalog />} />
           <Route path="/create" element={<TabsWrapper />}>
             <Route path="/create/listing" element={<Listing />} />
             <Route path="/create/topic" element={<Topic />} />
