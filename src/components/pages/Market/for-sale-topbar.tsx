@@ -1,7 +1,5 @@
 import { Icon } from '@iconify/react';
 import Select from '../../common/select';
-import { Input } from '../../common/input';
-import CardContainer from './card-container';
 
 export default function ForSaleTopBar() {
   return (
@@ -30,7 +28,6 @@ export default function ForSaleTopBar() {
           />
         </div>
       </div>
-      <CardContainer />
     </section>
   );
 }

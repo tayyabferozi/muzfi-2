@@ -12,7 +12,7 @@ export default function Category({ category }: { category: any }) {
 }
 
 // @ts-ignore
-const CategoryCard = ({ title, icon, value, active }) => {
+export const CategoryCard = ({ title, icon, value, active }) => {
   return (
     <div
       role='button'
