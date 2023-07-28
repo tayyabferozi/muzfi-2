@@ -1,16 +1,10 @@
-import { Link, NavLink, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
+import { useLocation } from 'react-router-dom';
 
-import './Sidebar.css';
-import GradientBtn from '../../buttons/GradientBtn';
-import { cn } from '../../../helpers/utils';
 import Resources from './Resources';
-import SidebarItems from './SidebarItems';
+import './Sidebar.css';
 
 import SidebarPanel from './SidebarPanel';
-
-
-
 
 const Sidebar = ({
   isSidebarOpen,
@@ -23,7 +17,7 @@ const Sidebar = ({
   return (
     <div
       className={clsx(
-        'fixed bg-accentGray-500 top-[70px] xl:static xl:h-[unset] h-[calc(100vh-70px)] w-[210px] overflow-auto flex-shrink-0 ',
+        'sticky  self-start  bg-accentGray-500 top-28 overflow-auto xl:h-[unset] h-full w-[210px]  flex-shrink-0 ',
         isSidebarOpen ? 'left-0' : '-left-[300px]'
       )}
       id='main-layout-sidebar'
@@ -35,11 +29,10 @@ const Sidebar = ({
         >
           &times;
         </div>
-            <SidebarPanel/>
-        <div className='px-6 mt-4 rounded-lg py-3 bg-primary'>
-          <Resources/>
+        <SidebarPanel />
+        <div className='px-6 py-3 mt-4 rounded-lg bg-primary'>
+          <Resources />
         </div>
-        
       </div>
     </div>
   );
