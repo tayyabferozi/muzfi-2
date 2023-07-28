@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import ForSaleTopBar from './for-sale-topbar';
 
 const ForSale = () => {
-
-// THIS is for (6. For Sale Page) SEE FIGMA FILE
+  // THIS is for (6. For Sale Page) SEE FIGMA FILE
   return (
-    <div>For Sale</div>
-  )
-}
+    <div>
+      <ForSaleTopBar />
+    </div>
+  );
+};
 
-export default ForSale
+export default ForSale;
