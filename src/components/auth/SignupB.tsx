@@ -1,13 +1,9 @@
 import React from 'react'
-import SignupA from './SignupA'
 
 const SignupB = () => {
   return (
-    <>
-          <SignupA />
-          <SignupB />
-    </>
-  );
+    <div>SignupB</div>
+  )
 }
 
 export default SignupB

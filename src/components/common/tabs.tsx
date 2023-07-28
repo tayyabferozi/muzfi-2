@@ -28,8 +28,8 @@ const Tabs = () => (
 export default Tabs;
 
 const tabs = [
-  { label: 'Sell Gear', link: '/my-gearroom/listing' },
-  { label: 'Topic &Question', link: '/my-gearroom/topic' },
-  { label: 'Add Gear', link: '/my-gearroom/new-gear' },
-  { label: 'Poll', link: '/my-gearroom/polls' },
+  { label: 'Sell Gear', link: '/create/listing' },
+  { label: 'Topic &Question', link: '/create/topic' },
+  { label: 'Add Gear', link: '/create/new-gear' },
+  { label: 'Poll', link: '/create/polls' },
 ];
