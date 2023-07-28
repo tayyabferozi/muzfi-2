@@ -1,56 +1,54 @@
-import YellowBtn from '../../../buttons/YellowBtn/YellowBtn';
-import { Input } from '../../../common/input';
+import * as Tabs from '@radix-ui/react-tabs';
+import { ProductInfo } from './product-info';
+import { Icon } from '@iconify/react';
+import Description from './description';
 
 const Listing = () => {
   // ADD Create Listing Page Sequence Here (7. Create Thread: LISTING)
 
   return (
     <>
-      <div className='grid grid-cols-4'>
-        <div className='col-span-3'>
-          <p className='font-semibold leading-tight'>Tell us about your gear</p>
-          <div>
-            {data.map((_) => (
-              <Input {..._} />
-            ))}
-            <p className='text-black text-[11px] font-semibold'>
-              Is this handmade?
-            </p>
-            <div className='flex items-center gap-2.5 cursor-pointer'>
-              <input
-                type='checkbox'
-                id='check'
-                className='checked:accent-zinc-100'
-              />
-              <label
-                htmlFor='check'
-                className='text-sm font-normal text-black cursor-pointer'
-              >
-                I handmade this item
-              </label>
-            </div>
+      {/* steeper           */}
+
+      <Tabs.Root defaultValue='Product Info'>
+        <div className='grid grid-cols-4'>
+          <div className='col-span-3 pr-2.5'>
+            <Tabs.Content value='Product Info'>
+              <ProductInfo />
+            </Tabs.Content>
+            <Tabs.Content value='Photos & Description'>
+              <Description />
+            </Tabs.Content>
           </div>
-          <YellowBtn className='px-6 my-8 w-max' label={'Continue'} />
+          <Tabs.List className='border-l pl-1.5 flex flex-col gap-20 relative items-start h-fit border-slate-400/20'>
+            <div className='absolute w-px h-full bg-accentYellow-500 left-[18px]' />
+            {steps.map((_) => (
+              <Tabs.Trigger
+                value={_}
+                className='relative z-10 flex items-center gap-3 mx-1 group'
+              >
+                <div className='w-[18px] grid place-content-center h-[18px] group-aria-selected:bg-white bg-accentYellow-500 rounded-full border border-yellow-500'>
+                  <Icon
+                    icon={'material-symbols:check'}
+                    className='text-sm text-white'
+                  />
+                </div>
+                <p className='text-sm font-medium leading-[18px]'>{_}</p>
+              </Tabs.Trigger>
+            ))}
+          </Tabs.List>
         </div>
-      </div>
+      </Tabs.Root>
     </>
   );
 };
 
 export default Listing;
 
-const data = [
-  { placeholder: 'Brand', 'aria-required': true },
-  { placeholder: 'Model', 'aria-required': true },
-  {
-    placeholder: 'Year',
-    'aria-details':
-      'If you don\'t know the exact year, use a fuzzy date like "mid-90s" or "1953-1957."',
-  },
-  { placeholder: 'Finish' },
-  {
-    placeholder: 'Model',
-    'aria-label': 'Listing Title',
-    'aria-required': true,
-  },
+const steps = [
+  'Product Info',
+  'Photos & Description',
+  'Shipping',
+  'Pricing',
+  'Review',
 ];
