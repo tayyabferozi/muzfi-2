@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authPopupReducer from "./features/auth/authPopupSlice";
 import authTypeReducer from './features/auth/authTypeSlice';
+import authLoginReducer from './features/auth/authLoginSlice';
 
 export const store = configureStore({
   reducer: {
     authPopup: authPopupReducer,
     authType: authTypeReducer,
+    authLogin: authLoginReducer,
   },
 });
 

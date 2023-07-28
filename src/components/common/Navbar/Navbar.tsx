@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GradientBtn from "../../buttons/GradientBtn";
 import Search from "../Search/Search";
 import { useAppDispatch } from "../../../redux/hooks";
@@ -13,7 +13,7 @@ const Navbar = ({
   setIsSidebarOpen: any;
 }>) => {
   const dispatch = useAppDispatch();
-
+  const navigate = useNavigate();
   return (
     <nav className="fixed inset-x-0 top-0 z-50 shadow-lg bg-primary">
       <div className="   container   h-[70px] flex justify-between items-center py-4 sm:px-[24px] px-[12px] z-20">

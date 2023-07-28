@@ -6,13 +6,16 @@ import { Link } from "react-router-dom";
 import Login from "../../interfaces/Login";
 import { useAppDispatch } from "../../redux/hooks";
 import { signup } from "../../redux/features/auth/authTypeSlice";
+import { authClose } from "../../redux/features/auth/authPopupSlice";
+import { authLogin } from "../../redux/features/auth/authLoginSlice";
 
 interface LoginProps {
   inputAssets: Login[];
 }
 
 const LoginForm: React.FC<LoginProps> = ({ inputAssets }: LoginProps) => {
-const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
+  const userLogin = () => {dispatch(authLogin()); dispatch(authClose());}
   return (
     <div>
       <section>
@@ -62,7 +65,12 @@ const dispatch = useAppDispatch();
       </form>
 
       <div className="mt-12">
-        <button className="bg-[#3E454B] text-white w-full p-2 rounded-2xl">
+        <button
+          className="bg-[#3E454B] text-white w-full p-2 rounded-2xl"
+          onClick={() => {
+            userLogin();
+          }}
+        >
           Login
         </button>
         <p className="text-[#B5B5B5] my-5 text-center">or continue with</p>
