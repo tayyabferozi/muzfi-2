@@ -2,12 +2,13 @@ import React from "react";
 
 
 
-import { Link } from "react-router-dom";
+
 import Login from "../../interfaces/Login";
 import { useAppDispatch } from "../../redux/hooks";
 import { signup } from "../../redux/features/auth/authTypeSlice";
 import { authClose } from "../../redux/features/auth/authPopupSlice";
 import { authLogin } from "../../redux/features/auth/authLoginSlice";
+import AuthBtns from "./AuthBtns";
 
 interface LoginProps {
   inputAssets: Login[];
@@ -74,22 +75,18 @@ const LoginForm: React.FC<LoginProps> = ({ inputAssets }: LoginProps) => {
           Login
         </button>
         <p className="text-[#B5B5B5] my-5 text-center">or continue with</p>
-        <div className="flex items-center justify-center gap-4">
-          <img
-            className="w-6 h-6 cursor-pointer"
-            src="/assets/imgs/home/facebook.png"
-            alt="apple logo"
-          />
-          <img
-            className="w-7 h-7 cursor-pointer"
-            src="/assets/imgs/home/apple.png"
-            alt="apple logo"
-          />
-          <img
-            className="w-6 h-6 cursor-pointer"
-            src="/assets/imgs/home/google.png"
-            alt="google logo"
-          />
+        <AuthBtns />
+        <div className="xs:w-full sm:w-full w-96 text-center m-auto mt-6">
+          <p>
+            By continuing, you are setting up a Muzfi account and agree to our
+            <span className="text-[#0079D3] cursor-pointer mx-1">
+              User Agreement
+            </span>
+            and
+            <span className="text-[#0079D3] cursor-pointer mx-1">
+              Privacy Policy.
+            </span>
+          </p>
         </div>
       </div>
     </div>

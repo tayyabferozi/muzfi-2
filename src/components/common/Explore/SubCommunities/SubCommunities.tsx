@@ -2,24 +2,24 @@ import LightBlueBtn from '../../../buttons/LightBlueBtn';
 
 const subCommunities = [
   {
-    img: '/assets/imgs/home/user-img-1.png',
-    name: 'TeamFender',
-    memNum: '2.3k',
+    img: "/assets/imgs/brands/fender.png",
+    name: "TeamFender",
+    memNum: "2.3k",
   },
   {
-    img: '/assets/imgs/home/user-img-3.png',
-    name: 'ISeeNord',
-    memNum: '1.6k',
+    img: "/assets/imgs/brands/tama.png",
+    name: "IPlayTama",
+    memNum: "1.6k",
   },
   {
-    img: '/assets/imgs/home/user-img-1.png',
-    name: 'TeamFender',
-    memNum: '2.3k',
+    img: "/assets/imgs/brands/korg.png",
+    name: "KorgGang",
+    memNum: "2.3k",
   },
   {
-    img: '/assets/imgs/home/user-img-3.png',
-    name: 'ISeeNord',
-    memNum: '1.6k',
+    img: "/assets/imgs/brands/pearl.png",
+    name: "PearlsFam",
+    memNum: "1.6k",
   },
 ];
 
@@ -36,7 +36,7 @@ const SubCommunities = () => {
               key={'home-popular-sub-communicaties' + idx}
             >
               <img
-                className='w-[36px] h-[36px] rounded-[50%] flex-shrink-0'
+                className='w-[36px] h-[36px] rounded-[70%] flex-shrink-0'
                 src={el.img}
                 alt={el.name}
               />

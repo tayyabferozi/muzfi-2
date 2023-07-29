@@ -25,13 +25,13 @@ const Explore = () => {
     switch (true) {
       case pathname.includes("browse"):
         return <ExploreMenu />;
-      case pathname.includes("gearroom"):
+      case pathname.includes("create"):
         return <Profile />;
       default:
         return extra;
     }
   }, [pathname]);
-  const Comp = pathname.includes("gearroom") ? "div" : Card;
+  const Comp = pathname.includes("create") ? "div" : Card;
   return <Comp className="rounded-b-none lg:h-full lg:mt-0">{content}</Comp>;
 };
 
