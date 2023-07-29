@@ -36,7 +36,7 @@ const GradientBtn = ({
           <img className={clsx(iconClassName)} src={icon} alt={label} />
         </div>
       )}
-      <p className="text-sm font-semibold leading-tight text-gray-200 capitalize">
+      <p className="text-sm font-medium leading-tight text-white capitalize">
         {label}
       </p>
     </button>

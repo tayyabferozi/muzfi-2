@@ -107,7 +107,7 @@ const Categories = () => {
         </div>
       </div>
 
-      <div className='mt-[18px]'>
+      <div className='mt-[10px]'>
         <div className=''>
           <Swiper
             modules={[Navigation]}

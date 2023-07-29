@@ -4,14 +4,17 @@ import { Link} from "react-router-dom";
 const resources = [
   {
     to: "/",
-    icon: "/assets/vectors/sidebar/music.svg",
+    icon: "/assets/imgs/home/advertising-3.png",
     label: "Advertise",
   },
-  { to: "/", icon: "/assets/vectors/sidebar/music.svg", label: "Help" },
-  { to: "/", icon: "/assets/vectors/sidebar/music.svg", label: "Careers" },
-  { to: "/", icon: "/assets/vectors/sidebar/music.svg", label: "About Muzfi" },
-  { to: "/", icon: "/assets/vectors/sidebar/music.svg", label: "Policy" },
-
+  { to: "/", icon: "/assets/imgs/home/help.png", label: "Help" },
+  { to: "/", icon: "/assets/imgs/home/career-growth-2.png", label: "Careers" },
+  {
+    to: "/",
+    icon: "/assets/imgs/home/about.png",
+    label: "About Muzfi",
+  },
+  { to: "/", icon: "/assets/imgs/home/policy.png", label: "Policy" },
 ];
 const Resources = () => {
   return (
@@ -26,7 +29,7 @@ const Resources = () => {
             key={"sidebar-topic-item" + idx}
           >
             <div>
-              <img src={el.icon} alt={el.label} />
+              <img className='h-6' src={el.icon} alt={el.label} />
             </div>
             <div className="text-base font-semibold text-white text-sm">{el.label}</div>
           </Link>

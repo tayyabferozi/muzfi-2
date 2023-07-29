@@ -4,6 +4,7 @@ import GradientBtn from "../../buttons/GradientBtn";
 import Search from "../Search/Search";
 import { useAppDispatch } from "../../../redux/hooks";
 import { authShow } from "../../../redux/features/auth/authPopupSlice";
+import { signin, signup } from "../../../redux/features/auth/authTypeSlice";
 
 const Navbar = ({
   isSidebarOpen,
@@ -47,8 +48,8 @@ const Navbar = ({
         </div>
         <div className="flex items-center justify-end flex-shrink-0 xl:w-1/3 ">
           <div className="flex items-center sm:gap-[22px] gap-3">
-            <Link className="transition-transform hover:scale-105" to="/">
-              <img src="/assets/vectors/navbar/earth.svg" alt="earth" />
+            <Link className="transition-transform hover:scale-105" to="/browse">
+              <img className="h-6" src="/assets/imgs/home/networking.png" alt="earth" />
             </Link>
             <Link className="transition-transform hover:scale-105" to="/">
               <img
@@ -60,10 +61,11 @@ const Navbar = ({
 
             <div className="w-[1px] h-[22px] bg-white bg-opacity-50 sm:block hidden"></div>
             <Link
-              className="text-base font-semibold text-white transition-colors hover:text-opacity-75"
+              className="text-base font-medium text-white transition-colors hover:text-opacity-75"
               to="/"
               onClick={() => {
-                dispatch(authShow());
+                dispatch(authShow())
+                 dispatch(signin())
               }}
             >
               Login
@@ -71,7 +73,8 @@ const Navbar = ({
             <Link
               to=""
               onClick={() => {
-                dispatch(authShow());
+                dispatch(authShow())
+                dispatch(signup())
               }}
             >
               <GradientBtn label="Register" />

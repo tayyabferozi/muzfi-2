@@ -8,11 +8,12 @@ const Feeds = ({ feedTypes }: { feedTypes: any }) => {
         {feedTypes.map((el: any, idx: any) => {
           return (
             <GradientBtn
-              key={'home-feed-type' + idx}
+              key={"home-feed-type" + idx}
               {...el}
               textSm
-              iconClassName='w-[18px]'
+              iconClassName="w-[15px]"
               veryShort
+              className="h-9"
             />
           );
         })}

@@ -1,4 +1,5 @@
 import LightBlueBtn from '../../../buttons/LightBlueBtn';
+import YellowBtn from '../../../buttons/YellowBtn';
 
 const subCommunities = [
   {
@@ -32,23 +33,23 @@ const SubCommunities = () => {
         {subCommunities.map((el, idx) => {
           return (
             <div
-              className='flex items-start gap-[14px] mb-[18px]'
-              key={'home-popular-sub-communicaties' + idx}
+              className="flex items-start gap-[14px] mb-[18px]"
+              key={"home-popular-sub-communicaties" + idx}
             >
               <img
-                className='w-[36px] h-[36px] rounded-[70%] flex-shrink-0'
+                className="w-[36px] h-[36px] rounded-[70%] flex-shrink-0"
                 src={el.img}
                 alt={el.name}
               />
-              <div className='mt-[2px] flex-grow flex justify-between items-center'>
+              <div className="mt-[2px] flex-grow flex justify-between items-center">
                 <div>
-                  <div className='text-xs font-semibold'>{el.name}</div>
-                  <div className='text-xs text-accentGray-700'>
+                  <div className="text-xs font-semibold">{el.name}</div>
+                  <div className="text-xs text-accentGray-700">
                     {el.memNum} members
                   </div>
                 </div>
-                <div className='cursor-pointer'>
-                  <img src='/assets/vectors/home/add-user.svg' alt='add user' />
+                <div className="cursor-pointer">
+                  <YellowBtn short label="Join" />
                 </div>
               </div>
             </div>

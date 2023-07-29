@@ -16,23 +16,23 @@ const navItems = [
   },
   {
     to: "/gear-catalog",
-    icon: "/assets/imgs/home/gear.png",
+    icon: "/assets/imgs/home/setting.png",
     label: "Gear Catalog",
   },
   {
     to: "/subscribe",
-    icon: "/assets/imgs/home/policy.png",
+    icon: "/assets/imgs/home/subscription-2.png",
     label: "Subscribe",
   },
 
   {
     to: "/about-us",
-    icon: "/assets/imgs/home/about.png",
+    icon: "/assets/imgs/home/newsletter.png",
     label: "Newsletters",
   },
   {
     to: "/policy",
-    icon: "/assets/imgs/home/options.png",
+    icon: "/assets/imgs/home/connection.png",
     label: "Connect", //Until We grow will be "Releases"
   },
 ];
@@ -54,7 +54,7 @@ const { pathname } = useLocation();
                   />
                   <div className=''>
                     <img
-                      className='w-[20px] h-[20px] '
+                      className='w-6 h-6 '
               
                       src={el.icon}
                       alt={el.label}
