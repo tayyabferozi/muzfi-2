@@ -2,28 +2,28 @@ import LightBlueBtn from '../../../buttons/LightBlueBtn';
 
 const reviews = [
   {
-    img: '/assets/imgs/home/user-img-8.png',
-    name: 'Tom Hardy',
+    img: '/assets/imgs/home/marcus.png',
+    name: 'Marcus Miller',
     time: '2 weeks ago',
     review:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    flowers: '1,65,201',
+    flowers: '5,901',
   },
   {
-    img: '/assets/imgs/home/user-img-9.png',
-    name: 'Matt Damon',
+    img: '/assets/imgs/home/corey.png',
+    name: 'Corey Henry',
     time: '2 weeks ago',
     review:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    flowers: '1,65,201',
+    flowers: '65,201',
   },
   {
-    img: '/assets/imgs/home/user-img-10.png',
-    name: 'Bri Larson',
+    img: '/assets/imgs/home/mark.png',
+    name: 'Mark Lettieri',
     time: '2 weeks ago',
     review:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    flowers: '1,65,201',
+    flowers: '33,732',
   },
 ];
 
