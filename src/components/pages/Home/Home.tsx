@@ -45,19 +45,7 @@ const feedTypes = [
     label: 'New Gear',
   },
   {
-    icon: '/assets/vectors/home/polls.svg',
-    label: 'Polls',
-  },
-  {
     icon: '/assets/vectors/home/add.svg',
-    label: 'Latest',
-  },
-  {
-    icon: '/assets/vectors/home/add.svg',
-    label: 'Communities',
-  },
-  {
-    icon: '/assets/vectors/home/add.svg',
-    label: 'Reviews',
+    label: 'My Communities',
   },
 ];
