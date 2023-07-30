@@ -32,13 +32,15 @@ export default function Shipping() {
     <>
       <section>
         <p className='font-semibold '>Shipping</p>
-        <p className='text-sm font-semibold '>
+        <p className='text-sm font-semibold mt-1.5'>
           <span>How will you deliver the item to the buyer? </span>
           <span className='text-red-600 '>*</span>
         </p>
-        <div className='text-sm '>You can select both options.</div>
-        <Checkbox label='Shipping' extra='Items sell faster' />
-        <Checkbox label='Local Pickup' />
+        <div className='text-sm mt-1.5 mb-3 '>You can select both options.</div>
+        <div className='space-y-1'>
+          <Checkbox label='Shipping' extra='Items sell faster' />
+          <Checkbox label='Local Pickup' />
+        </div>
       </section>
     </>
   );

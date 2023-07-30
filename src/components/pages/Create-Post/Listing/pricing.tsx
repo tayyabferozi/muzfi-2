@@ -12,7 +12,7 @@ export default function Pricing() {
         <span className='text-red-600 '>*</span>
       </div>
       <ShippingTable />
-      <p className='text-[11px] font-bold'>
+      <p className='text-[11px] font-bold mt-10 mb-1'>
         Shipping Rate
         <span className='text-red-600 '>*</span>
       </p>
@@ -21,7 +21,7 @@ export default function Pricing() {
         placeholder='USD'
         className='w-full bg-zinc-100'
       />
-      <p className='text-blue-700 text-[10px] font-bold'>
+      <p className='text-blue-700 mt-1 mb-2 text-[10px] font-bold'>
         Shipping label cost estimator
       </p>
       <Checkbox label='Offer a Combine & Save shipping rate' />
