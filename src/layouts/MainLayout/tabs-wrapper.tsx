@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Select from '../../components/common/select';
 import Tabs from '../../components/common/tabs';
+import { Checkbox } from '../../components/pages/Create-Post/Listing/shipping';
 
 export default function TabsWrapper() {
   return (
@@ -15,20 +16,7 @@ export default function TabsWrapper() {
         <Tabs />
         <Outlet />
         <div className=' flex items-center p-2.5 bg-zinc-100 rounded-lg justify-between'>
-          <div className='flex items-center gap-2.5 cursor-pointer'>
-            <input
-              type='checkbox'
-              defaultChecked
-              id='notifications'
-              className='checked:accent-blue-500'
-            />
-            <label
-              htmlFor='notifications'
-              className='text-sm font-normal text-black cursor-pointer'
-            >
-              Send me post reply notifications
-            </label>
-          </div>
+          <Checkbox label='Send me post reply notifications' />
           <a
             href='/'
             className='flex items-center gap-2 text-sm font-medium text-right text-blue-700'
