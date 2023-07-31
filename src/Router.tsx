@@ -13,6 +13,13 @@ import TabsWrapper from "./layouts/MainLayout/tabs-wrapper";
 
 import ForSale from "./components/pages/Market";
 import GearCatalog from "./components/pages/Gear-Catalog";
+import Subscription from "./components/pages/Subscription";
+import Newsletter from "./components/pages/Newsletter";
+import Connect from "./components/pages/Connect";
+import Ads from "./components/pages/Advertise";
+import Policy from "./components/pages/Policy";
+import About from "./components/pages/About";
+import Help from "./components/pages/Help-Center";
 
 const AppRouter = () => {
 
@@ -28,6 +35,14 @@ const AppRouter = () => {
 
           <Route path="/for-sale" element={<ForSale />} />
           <Route path="/gear-catalog" element={<GearCatalog />} />
+          <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/subscribe" element={<Subscription />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/ads" element={<Ads />} />
+          <Route path="/policy" element={<Policy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/careers" element={<GearCatalog />} />
           <Route path="/create" element={<TabsWrapper />}>
             <Route path="/create/listing" element={<Listing />} />
             <Route path="/create/topic" element={<Topic />} />

@@ -1,10 +1,10 @@
 import React from 'react'
 import ComingSoon from '../../common/Error/ComingSoon';
 
-const GearCatalog = () => {
+const About = () => {
   return (
     <div> <ComingSoon/></div>
   )
 }
 
-export default GearCatalog;
+export default About;
