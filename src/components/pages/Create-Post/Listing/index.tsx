@@ -1,7 +1,13 @@
-import * as Tabs from '@radix-ui/react-tabs';
-import { ProductInfo } from './product-info';
 import { Icon } from '@iconify/react';
+import * as Tabs from '@radix-ui/react-tabs';
+import GreyBtn from '../../../buttons/GreyBtn';
+import YellowBtn from '../../../buttons/YellowBtn';
 import Description from './description';
+import { ProductInfo } from './product-info';
+import Shipping from './shipping';
+import ShippingDetails from './shipping-details';
+import Pricing from './pricing';
+import Review from './review';
 
 const Listing = () => {
   // ADD Create Listing Page Sequence Here (7. Create Thread: LISTING)
@@ -19,11 +25,32 @@ const Listing = () => {
             <Tabs.Content value='Photos & Description'>
               <Description />
             </Tabs.Content>
+            <div className='flex flex-col h-full'>
+              <div className='grow'>
+                <Tabs.Content value='Shipping' asChild>
+                  <>
+                    <Shipping />
+                    <ShippingDetails />
+                  </>
+                </Tabs.Content>
+                <Tabs.Content value='Pricing' asChild>
+                  <Pricing />
+                </Tabs.Content>
+                <Tabs.Content value='Review' asChild>
+                  <Review />
+                </Tabs.Content>
+              </div>
+              <div className='flex gap-5'>
+                <GreyBtn className='w-32 my-8' label={'Back'} />
+                <YellowBtn className='w-32 my-8' label={'Continue'} />
+              </div>
+            </div>
           </div>
           <Tabs.List className='border-l pl-1.5 flex flex-col gap-20 relative items-start h-fit border-slate-400/20'>
             <div className='absolute w-px h-full bg-accentYellow-500 left-[18px]' />
             {steps.map((_) => (
               <Tabs.Trigger
+                key={_}
                 value={_}
                 className='relative z-10 flex items-center gap-3 mx-1 group'
               >
