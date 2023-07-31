@@ -26,12 +26,12 @@ const navItems = [
   },
 
   {
-    to: "/about-us",
+    to: "/newsletter",
     icon: "/assets/imgs/home/newsletter.png",
     label: "Newsletters",
   },
   {
-    to: "/policy",
+    to: "/connect",
     icon: "/assets/imgs/home/connection.png",
     label: "Connect", //Until We grow will be "Releases"
   },
