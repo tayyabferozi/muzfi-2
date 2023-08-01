@@ -14,17 +14,15 @@ const ForSale = () => {
         168,874 Results
       </div>
       <div className='h-0 pb-8 mt-1 border-t border-slate-400/20' />
-      <div className='flex items-center gap-3.5'>
-        <Select
-          options={options}
-          placeholder='Brand'
-          className='w-full bg-zinc-100'
-        />
-        <Select
-          options={options}
-          placeholder='Country'
-          className='w-full bg-zinc-100'
-        />
+      <div className='flex items-center gap-3.5 flex-wrap'>
+        {tags.map((_) => (
+          <Select
+            key={_}
+            options={options}
+            placeholder={_}
+            className='w-full bg-zinc-100'
+          />
+        ))}
       </div>
       <SimilarProduct />
     </div>
@@ -33,3 +31,14 @@ const ForSale = () => {
 
 export default ForSale;
 const options = [{ label: 'hello' }, { label: 'world' }];
+
+const tags = [
+  'Brand',
+  'Country/Region of Manufacturer',
+  'Series',
+  'String Configuration',
+  'Body Color',
+  'Condition',
+  'Price',
+  'Buying Format',
+];
