@@ -17,11 +17,13 @@ export default function Select({
       <RdxSelect.Root onValueChange={setValue}>
         <RdxSelect.Trigger
           className={cn(
-            ' relative outline-none h-12 w-56 bg-white rounded-lg border border-slate-200 gap-4 px-3.5 flex capitalize items-center justify-between text-xs font-medium leading-[18px]',
+            ' relative outline-none h-12 w-56 bg-white rounded-lg border border-slate-200 gap-4 px-3.5 flex capitalize items-center whitespace-nowrap justify-between text-xs font-medium leading-[18px]',
             props.className
           )}
         >
-          <RdxSelect.Value>{value}</RdxSelect.Value>
+          <RdxSelect.Value className='whitespace-nowrap'>
+            {value}
+          </RdxSelect.Value>
           <RdxSelect.Icon>
             <svg
               xmlns='http://www.w3.org/2000/svg'
