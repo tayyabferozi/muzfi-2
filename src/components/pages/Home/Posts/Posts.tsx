@@ -137,8 +137,11 @@ const Posts = () => {
   return (
     <div>
       {posts.map((el, idx) => {
-        if (el.ad) return <img className='w-full mt-6' src={el.ad} alt='ad' />;
-        return <Post el={el} idx={idx} />;
+        if (el.ad)
+          return (
+            <img key={el.ad} className='w-full mt-6' src={el.ad} alt='ad' />
+          );
+        return <Post key={el.postText!} el={el} idx={idx} />;
       })}
     </div>
   );

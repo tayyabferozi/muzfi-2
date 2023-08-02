@@ -45,10 +45,10 @@ const Poll = ({ el, idx }: { el: any; idx: number }) => {
         </div>
       )}
       <div className='flex items-center justify-between mt-2'>
-        <div className='text-sm font-medium text-accentGray-700'>
+        <div className='text-[10px] font-medium text-accentGray-700'>
           {el.votesCount} votes
         </div>
-        <div className='text-sm font-medium text-accentGray-700'>
+        <div className='text-[10px] font-medium text-accentGray-700'>
           {el.timeLeft}
         </div>
       </div>
