@@ -25,15 +25,17 @@ const AppRouter = () => {
 
   return (
     <Router>
-      
       <Routes>
         <Route path="/" element={<MainLayout />}>
           {/* <Route path='/auth' element={<Auth isModalActive={hidden.value} type={type.value} />}/> */}
           <Route index element={<Home />} />
           <Route path="/browse" element={<Community />} />
+         
+
           <Route path="/browse/single" element={<CommunityPage />} />
 
           <Route path="/for-sale" element={<ForSale />} />
+          <Route path="user/for-sale" element={<ForSale />} /> 
           <Route path="/gear-catalog" element={<GearCatalog />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/subscribe" element={<Subscription />} />

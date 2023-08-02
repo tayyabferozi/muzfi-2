@@ -1,9 +1,9 @@
 import React from 'react'
 import Register from '../../interfaces/Register';
-import { Link } from "react-router-dom";
 import AuthBtns from './AuthBtns';
 import { useAppDispatch } from "../../redux/hooks";
 import { signin } from "../../redux/features/auth/authTypeSlice";
+import { handleNext } from "../../redux/features/auth/authTypeSlice";
 
     interface RegisterProps {
       inputAssets: Register[];
@@ -13,6 +13,8 @@ import { signin } from "../../redux/features/auth/authTypeSlice";
 const SignupA: React.FC<RegisterProps> = ({
   inputAssets, title
 }: RegisterProps) => {
+   
+
   const dispatch = useAppDispatch();
   return (
     <div className="tablet:hidden p-4">
@@ -60,7 +62,12 @@ const SignupA: React.FC<RegisterProps> = ({
       </form>
 
       <div className="mt-16">
-        <button className="bg-[#3E454B] text-white w-full p-2 rounded-2xl">
+        <button
+          className="bg-[#3E454B] text-white w-full p-2 rounded-2xl"
+          onClick={() => {
+            dispatch(handleNext());
+          }}
+        >
           Continue
         </button>
         <p className="text-[#B5B5B5] my-5 text-center">or continue with</p>

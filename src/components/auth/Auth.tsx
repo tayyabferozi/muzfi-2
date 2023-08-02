@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { authClose } from "../../redux/features/auth/authPopupSlice";
-import { useAppDispatch } from "../../redux/hooks";
+import { handlePrev } from "../../redux/features/auth/authTypeSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { inputAssets } from "./inputs";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
@@ -12,6 +13,23 @@ interface ModalProps {
 
 const Auth = ({ isModalActive, type }: ModalProps) => {
   const dispatch = useAppDispatch();
+  const hidden = useAppSelector((state) => state.authType);
+  const data = () => {
+    if (hidden.screen === true) {
+      return (
+        <img
+          className="h-6 "
+          src="/assets/imgs/home/back.png"
+          alt="back"
+          onClick={() => {
+            dispatch(handlePrev());
+          }}
+        />
+      );
+    } else {
+      return null;
+    }
+  };
     if (!isModalActive) return null;
     
     const findType = () => {
@@ -29,6 +47,7 @@ const Auth = ({ isModalActive, type }: ModalProps) => {
         {/*  */}
         <div className="h-fit w-100px bg-white pt-2 p-5 rounded-xl m-auto">
           <div className="flex ">
+            {data()}
             <img
               className="h-8 m-auto"
               src="/assets/imgs/common/logo-2.png"
