@@ -13,7 +13,7 @@ export function Images({
       {imgs?.map((el2: any, idx2: any) => {
         return (
           <div
-            className='relative flex-grow h-[74px]'
+            className='relative flex-grow h-[90px]'
             key={'home-post-img' + idx + '-' + idx2}
           >
             {idx2 === length - 1 && (
