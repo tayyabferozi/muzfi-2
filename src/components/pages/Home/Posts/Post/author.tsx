@@ -1,7 +1,16 @@
-export function Author({ el, idx }: { el: any; idx: number }) {
+import { cn } from '../../../../../helpers/utils';
+
+export function Author({
+  el,
+  idx,
+  topic,
+}: {
+  el: any;
+  idx: number;
+  topic?: boolean;
+}) {
   return (
     <>
-      {' '}
       <div className='flex flex-wrap items-center justify-between gap-4 mt-3'>
         <div className='flex gap-4'>
           <img
@@ -38,7 +47,11 @@ export function Author({ el, idx }: { el: any; idx: number }) {
             )}
           </div>
         </div>
-        <div className='flex flex-col items-end justify-center'>
+        <div
+          className={cn('flex flex-col items-end justify-center', {
+            hidden: topic,
+          })}
+        >
           {el.type === 'prod-gear' || el.type === 'prod-sale' ? (
             el.type !== 'prod-sale' && (
               <div className='flex items-center gap-[14px]'>
