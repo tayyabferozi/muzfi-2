@@ -39,3 +39,27 @@ export const inputAssetsA = [
     logoTwo: "/assets/imgs/home/visible.png",
   },
 ];
+
+export const inputAssetsB = [
+  {
+    name: "First Name",
+    type: "text",
+    placeholder: "Enter First Name",
+    logo: "/assets/imgs/home/username.png",
+    logoTwo: "",
+  },
+  {
+    name: "Last Name",
+    type: "password",
+    placeholder: "Enter Last Name",
+    logo: "/assets/imgs/home/lock.png",
+    logoTwo: "/assets/imgs/home/visible.png",
+  },
+  {
+    name: "Email",
+    type: "email",
+    placeholder: "Enter Email",
+    logo: "/assets/imgs/home/lock.png",
+    logoTwo: "/assets/imgs/home/visible.png",
+  },
+];

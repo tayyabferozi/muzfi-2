@@ -1,0 +1,43 @@
+@import url("https: //fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  
+    html {
+        @apply scroll-smooth;
+    }
+
+    .wrapper {
+        @apply w-full flex justify-start items-center flex-col;
+    }
+
+
+}
+
+.splide__pagination {
+    bottom: initial !important;
+    top: 115% !important;
+}
+
+.splide__pagination .splide__pagination__page {
+    background-color: #3e454b !important;
+}
+
+.splide__pagination .splide__pagination__page.is-active {
+    background-color: #ff6f30 !important;
+}
+
+@media screen and (max-width: 640px) {
+    .splide__pagination {
+        top: 105% !important;
+    }
+}
+
+
+input {
+    z-index: 1000;
+}
+
+

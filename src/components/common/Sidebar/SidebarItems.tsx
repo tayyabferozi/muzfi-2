@@ -22,7 +22,7 @@ const navItems = [
   {
     to: "/subscribe",
     icon: "/assets/imgs/home/subscription-2.png",
-    label: "Subscribe",
+    label: "Muzfi Premium",
   },
 
   {

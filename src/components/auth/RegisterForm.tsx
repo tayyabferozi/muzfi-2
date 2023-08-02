@@ -2,19 +2,21 @@ import React from 'react'
 import SignupA from './SignupA';
 import SignupB from './SignupB';
 import { inputAssetsA } from './inputs';
+import { inputAssetsB } from './inputs';
+import { useAppSelector } from '../../redux/hooks';
 
 const RegisterForm = () => {
-    const [activeStep, setActiveStep] = React.useState(0);
-    const [isLastStep, setIsLastStep] = React.useState(false);
-    const [isFirstStep, setIsFirstStep] = React.useState(false);
-
-    const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-    const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
+  const hidden = useAppSelector((state) => state.authType);
+    const data = () => {
+      if (hidden.screen === true) {
+        return <SignupB inputAssets={inputAssetsA} title="Create your Username and Password" />;
+      } else {
+        return <SignupA inputAssets={inputAssetsB} title="SignUp" />;
+      }
+    };
   return (
     <div>
-      <SignupA inputAssets={inputAssetsA} title="SignUp" />
-      {/* <SignupB />
-      <SignupB /> */}
+     {data()}
     </div>
   );
 }
