@@ -8,7 +8,6 @@ import { Images } from './images';
 import { User } from './user';
 
 const Listing = ({ el, idx }: { el: any; idx: number }) => {
-  if (el.type !== 'prod-sale') return;
   return (
     <Card className='h-full home-post' key={'home-post' + idx}>
       <User el={el} />
