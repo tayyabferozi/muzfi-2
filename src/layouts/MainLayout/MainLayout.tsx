@@ -45,7 +45,7 @@ const MainLayout = () => {
         </div>
 
         {!pathname.includes('for-sale') && !pathname.includes('about') && (
-          <div className='lg:min-w-[300px] scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   '>
+          <div className='lg:min-w-[300px] bg-white rounded-lg scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   '>
             <Ad /> <Explore />{' '}
           </div>
         )}
