@@ -34,6 +34,6 @@ export const authLoginSlice = createSlice({
 export const { authLogin, authLogout } = authLoginSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectCount = (state: RootState) => state.authPopup.value;
+export const selectLogin = (state: RootState) => state.authPopup.value;
 
 export default authLoginSlice.reducer;
