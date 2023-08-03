@@ -4,6 +4,9 @@ import Resources from './Resources';
 import './Sidebar.css';
 
 import SidebarPanel from './SidebarPanel';
+import { useSelector } from 'react-redux';
+import { selectLogin } from '../../../redux/features/auth/authLoginSlice';
+import MyCommunities from './my-communities';
 
 const Sidebar = ({
   isSidebarOpen,
@@ -12,6 +15,7 @@ const Sidebar = ({
   isSidebarOpen: any;
   setIsSidebarOpen: any;
 }>) => {
+  const isLoggedIn = useSelector(selectLogin);
   return (
     <div
       className={clsx(
@@ -29,7 +33,7 @@ const Sidebar = ({
         </div>
         <SidebarPanel />
         <div className='px-6 py-3 mt-4 rounded-lg bg-primary'>
-          <Resources />
+          {isLoggedIn ? <MyCommunities /> : <Resources />}
         </div>
       </div>
     </div>
