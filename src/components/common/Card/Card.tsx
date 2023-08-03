@@ -12,7 +12,7 @@ const Card = ({
   return (
     <div
       className={clsx(
-        'border-[1px] border-solid border-accentGray-600 rounded-lg bg-white p-[10px]',
+        'border-[1px] border-solid w-full border-accentGray-600 rounded-lg bg-white p-[10px]',
         !noMt && 'mt-3',
         className
       )}
