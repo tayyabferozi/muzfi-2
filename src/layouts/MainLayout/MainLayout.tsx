@@ -22,13 +22,13 @@ const MainLayout = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
       <Auth isModalActive={hidden.value} type={type.value} />
-      <div className='container flex flex-col p-6 bg-accentGray-500 lg:flex-row pt-28 '>
+      <div className='container [&>*]:overflow-auto pb-0 [&>*]:h-[calc(100vh-111px)] [&>*]:pb-6 flex flex-col gap-4 p-6 2xl:gap-5 bg-accentGray-500 lg:flex-row pt-28'>
         <Sidebar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
 
-        <div className='overflow-hidden flex-grow xl:pl-6 pl-0 pb-0 px-[10px] lg:mr-[rem] '>
+        <div className=' flex-grow pl-0 pb-0 lg:mr-[rem] scrollbar-hide'>
           <div className='gap-6 lg:flex'>
             <div
               className={cn({
@@ -45,7 +45,7 @@ const MainLayout = () => {
         </div>
 
         {!pathname.includes('for-sale') && !pathname.includes('about') && (
-          <div className='lg:min-w-[300px] 2xl:max-w-[330px] lg:max-w-[320px]   '>
+          <div className='lg:min-w-[300px] scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   '>
             <Ad /> <Explore />{' '}
           </div>
         )}

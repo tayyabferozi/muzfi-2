@@ -7,7 +7,6 @@ import { Images } from './images';
 import { User } from './user';
 
 const NewGear = ({ el, idx }: { el: any; idx: number }) => {
-  if (el.type !== 'prod-gear') return;
   return (
     <Card className='h-full home-post' key={'home-post' + idx}>
       <User el={el} />

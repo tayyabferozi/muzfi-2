@@ -5,7 +5,6 @@ import { CardFooter } from './card-footer';
 import { User } from './user';
 
 const Poll = ({ el, idx }: { el: any; idx: number }) => {
-  if (el.type !== 'prod-poll') return;
   return (
     <Card className='h-full home-post' key={'home-post' + idx}>
       <User el={el} />
