@@ -22,13 +22,13 @@ const MainLayout = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
       <Auth isModalActive={hidden.value} type={type.value} />
-      <div className='container flex flex-col p-6 bg-accentGray-500 lg:flex-row pt-28 '>
+      <div className='container flex flex-col gap-4 p-6 2xl:gap-5 bg-accentGray-500 lg:flex-row pt-28'>
         <Sidebar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
 
-        <div className='overflow-hidden flex-grow xl:pl-6 pl-0 pb-0 px-[10px] lg:mr-[rem] '>
+        <div className='overflow-hidden flex-grow pl-0 pb-0 lg:mr-[rem] '>
           <div className='gap-6 lg:flex'>
             <div
               className={cn({
