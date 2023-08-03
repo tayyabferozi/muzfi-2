@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Search from '../../common/Search/Search';
 import Categories from './Categories';
 import Feeds from './Feeds';
 import Posts from './Posts';
+import User from './User';
 
 const Home = () => {
   /// ADD Logic for 2 different Homepages Based on User being logged in
@@ -14,6 +14,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <User />
       <Categories />
       <Feeds feedTypes={feedTypes} />
       <Posts />
