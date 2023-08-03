@@ -4,7 +4,7 @@ export function Benefits({ el, idx }: { el: any; idx: number }) {
       {data.map((_) => (
         <div
           key={_.label}
-          className='w-full py-3 px-[18px] text-center max-w-[100px] bg-accentGray-400 rounded-lg text-accentGray-300 text-[10px] font-semibold'
+          className='w-full py-3 px-[18px] text-center bg-accentGray-400 rounded-lg text-accentGray-300 text-[10px] font-semibold'
         >
           {_.label}
           <div className='flex justify-center items-center gap-[3px] mt-[2px]'>
