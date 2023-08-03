@@ -14,8 +14,8 @@ export default function User() {
       />
 
       <div className='flex items-baseline justify-around px-10 -mt-20 max-lg:items-center max-lg:flex-col lg:px-14'>
-        <div className='flex flex-col items-center'>
-          <div className='p-2 bg-white rounded-xl w-44 lg:-translate-x-4 aspect-square '>
+        <div className='flex flex-col items-center lg:-translate-x-4'>
+          <div className='p-2 bg-white rounded-xl w-44 aspect-square '>
             <img
               src='https://images.pexels.com/photos/127027/pexels-photo-127027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt=''
