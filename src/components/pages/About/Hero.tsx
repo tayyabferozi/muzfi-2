@@ -1,6 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import GradientBtn from "../../buttons/GradientBtn";
-import './style.css';
+
 
 const Hero = () => {
   return (
