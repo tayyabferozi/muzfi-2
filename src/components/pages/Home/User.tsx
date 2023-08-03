@@ -13,9 +13,9 @@ export default function User() {
         className='object-cover w-full h-40 rounded-lg'
       />
 
-      <div className='flex items-baseline justify-around px-10 -mt-20 lg:px-14'>
+      <div className='flex items-baseline justify-around px-10 -mt-20 max-lg:items-center max-lg:flex-col lg:px-14'>
         <div className='flex flex-col items-center'>
-          <div className='bg-white rounded-lg w-44 aspect-square p-2.5 '>
+          <div className='bg-white rounded-lg w-44 lg:-translate-x-4 aspect-square p-2.5 '>
             <img
               src='https://images.pexels.com/photos/127027/pexels-photo-127027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               alt=''
@@ -29,7 +29,7 @@ export default function User() {
           </div>
         </div>
         {data.map((_) => (
-          <div key={_.label} className='w-20 -translate-y-8'>
+          <div key={_.label} className='w-20 lg:-translate-y-8 '>
             <p className='text-center  text-[34px] font-semibold'>{_.value}</p>
             <p className='font-medium text-center text-neutral-400'>
               {_.label}
