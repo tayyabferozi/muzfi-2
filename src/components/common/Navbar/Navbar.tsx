@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { selectLogin } from '../../../redux/features/auth/authLoginSlice';
 import YellowBtn from '../../buttons/YellowBtn/YellowBtn';
 import { Icon } from '@iconify/react';
+import { useMemo } from 'react';
 
 const Navbar = ({
   isSidebarOpen,
@@ -19,6 +20,19 @@ const Navbar = ({
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const isLogin = useSelector(selectLogin);
+  const navItems = useMemo(() => {
+    if (isLogin)
+      return [
+        { icon: 'icon-park-outline:like', href: '' },
+        { icon: 'ant-design:message-outlined', href: '' },
+        { icon: 'icon-park-outline:add-one', href: '' },
+        { icon: 'iconamoon:notification', href: '' },
+      ];
+    return [
+      { icon: 'pajamas:earth', href: '' },
+      { icon: 'iconamoon:notification', href: '' },
+    ];
+  }, [isLogin]);
   return (
     <nav className='fixed inset-x-0 top-0 z-50 shadow-lg bg-primary'>
       <div className='   container   h-[70px] flex justify-between items-center py-4 sm:px-[24px] px-[12px] z-20'>
@@ -52,22 +66,22 @@ const Navbar = ({
         </div>
         <div className='flex items-center justify-end flex-shrink-0 xl:w-1/3 '>
           <div className='flex items-center sm:gap-[22px] gap-3'>
-            <Link className='transition-transform hover:scale-105' to='/browse'>
-              <img
-                className='h-6'
-                src='/assets/imgs/home/networking.png'
-                alt='earth'
+            {navItems.map((_) => (
+              <Link
+                className='transition-transform hover:scale-105'
+                to={_.href}
+                key={_.href}
+              >
+                <Icon icon={_.icon} className='text-lg text-white' />
+              </Link>
+            ))}
+            <div className='w-[1px] h-[22px] bg-white bg-opacity-50 sm:block hidden'></div>{' '}
+            <Link className='transition-transform hover:scale-105' to={'/'}>
+              <Icon
+                icon={'uil:cart'}
+                className='text-lg text-accentYellow-500'
               />
             </Link>
-            <Link className='transition-transform hover:scale-105' to='/'>
-              <img
-                className='h-6'
-                src='/assets/imgs/home/cart.png'
-                alt='cart'
-              />
-            </Link>
-
-            <div className='w-[1px] h-[22px] bg-white bg-opacity-50 sm:block hidden'></div>
             {isLogin ? (
               <>
                 <YellowBtn
