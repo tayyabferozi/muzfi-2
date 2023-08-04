@@ -27,7 +27,6 @@ const MainLayout = () => {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
-
         <div className=' flex-grow pl-0 pb-0 lg:mr-[rem] scrollbar-hide'>
           <div className='gap-6 lg:flex'>
             <div
@@ -44,11 +43,13 @@ const MainLayout = () => {
           </div>
         </div>
 
-        {!pathname.includes('for-sale') && !pathname.includes('about') && (
-          <div className='lg:min-w-[300px] bg-white rounded-lg scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   '>
-            <Ad /> <Explore />{' '}
-          </div>
-        )}
+        {!pathname.includes('for-sale') &&
+          !pathname.includes('about') &&
+          !pathname.includes('my-gearroom') && (
+            <div className='lg:min-w-[300px] bg-white rounded-lg scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   '>
+              <Ad /> <Explore />{' '}
+            </div>
+          )}
       </div>
     </div>
   );
