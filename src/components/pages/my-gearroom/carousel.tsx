@@ -1,10 +1,10 @@
-import { HTMLAttributes, useRef, useState } from 'react';
+import { HTMLAttributes, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import 'swiper/css/zoom';
 import 'swiper/css/thumbs';
+import 'swiper/css/zoom';
 
 import { FreeMode, Navigation, Thumbs, Zoom } from 'swiper';
 import { cn } from '../../../helpers/utils';
