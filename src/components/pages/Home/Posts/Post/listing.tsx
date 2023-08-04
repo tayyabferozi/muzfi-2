@@ -16,8 +16,8 @@ const Listing = ({ el, idx }: { el: any; idx: number }) => {
 
       <div className='mt-7'>
         <div className='text-center'>
-          <p className='text-xs font-semibold '>Fender Jazz Bass</p>
-          <p className='text-red-400 text-[9px] font-semibold'>Current Gear</p>
+          <p className='font-semibold '>Fender Jazz Bass</p>
+          <p className='text-xs font-semibold text-red-400'>Current Gear</p>
         </div>
       </div>
 

@@ -11,7 +11,7 @@ const Poll = ({ el, idx }: { el: any; idx: number }) => {
       <hr />
       <Author el={el} idx={idx} />
       <div className='mt-7'>
-        <p className=' text-[13px] font-medium'>Nord or Roland?</p>
+        <p className='text-2xl font-medium '>Nord or Roland?</p>
       </div>
       {el.prodDescription && (
         <div className='mt-4 text-xs font-medium text-accentGray-800'>
