@@ -1,8 +1,15 @@
-import React from 'react'
+import Carousel from './carousel';
+import Details from './details';
 
-const ListingPage = () => {
-  // This will be 9 Thread Single Page: listing page
-  return <div>index</div>;
+export default function ListingPage() {
+  // This page will be 10. User Gear Page !! Not 9. Threads Etc
+
+  return (
+    <section>
+      <div className='grid-cols-2 gap-6 lg:grid'>
+        <Carousel />
+        <Details />
+      </div>
+    </section>
+  );
 }
-
-export default ListingPage;
