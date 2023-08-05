@@ -1,11 +1,13 @@
-import React from 'react'
-import ComingSoon from '../../common/Error/ComingSoon'
+import Carousel from './carousel';
+import Details from './details';
 
-const index = () => {
-// This page will be 10. User Gear Page !! Not 9. Threads Etc
+export default function MyGearRoom() {
+  // This page will be 10. User Gear Page !! Not 9. Threads Etc
+
   return (
-    <div><ComingSoon/></div>
-  )
+    <section className='grid-cols-2 gap-6 lg:grid'>
+      <Carousel />
+      <Details />
+    </section>
+  );
 }
-
-export default index
