@@ -15,7 +15,7 @@ const NewGear = ({ el, idx }: { el: any; idx: number }) => {
 
       <div className='mt-7'>
         <div className='text-center'>
-          <div className='text-xs font-semibold'>{el.postTitle}</div>
+          <div className='font-semibold'>{el.postTitle}</div>
         </div>
       </div>
       <Benefits el={el} idx={idx} />

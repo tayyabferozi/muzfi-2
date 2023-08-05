@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import { cn } from '../../../../../helpers/utils';
 
 export function Author({
@@ -37,10 +38,11 @@ export function Author({
               </div>
             </div>
 
-            <div className='text-accentGray-700 text-[10px] font-medium mt-1'>
-              {el.location}
-            </div>
-
+            {(el.type === 'prod-gear' || el.type === 'prod-sale') && (
+              <div className='text-accentGray-700 text-[10px] font-medium mt-1'>
+                {el.location}
+              </div>
+            )}
             {el.newGear && el.type === 'prod-gear' && (
               <div className='text-[9px] font-semibold'>New Gear !</div>
             )}
@@ -76,6 +78,18 @@ export function Author({
               )
             : null}
         </div>
+        {(el.type === 'prod-poll' || topic) && (
+          <div className='flex flex-col items-end'>
+            <Icon
+              role='button'
+              icon='majesticons:more-menu-line'
+              className='text-2xl'
+            />
+            <div className='mt-1 text-xs font-medium text-accentGray-700'>
+              {el.location}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

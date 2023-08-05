@@ -10,7 +10,7 @@ const SidebarItems = () => {
       return [
         { to: '/', icon: '/assets/imgs/home/home.png', label: 'Home' },
         {
-          to: '/browse',
+          to: '/my-gearroom',
           icon: '/assets/vectors/sidebar/list.svg',
           label: 'My GearRoom',
         },
