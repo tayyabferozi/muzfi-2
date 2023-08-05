@@ -13,7 +13,7 @@ export default function ForSaleTopBar() {
           <button className='text-white rounded-md h-11 bg-gradient-to-l from-red-500 to-yellow-500'>
             Shop
           </button>
-          <button>About</button>
+          <button>My Store</button>
         </div>
         <Select
           options={options}
