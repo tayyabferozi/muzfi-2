@@ -7,7 +7,7 @@ const MyCommunities = () => {
       {' '}
       <h5 className='mb-3 text-lg font-semibold text-white'>My Communities</h5>
       <div className='space-y-3'>
-        {Array.from(Array(8)).map((_) => {
+        {Array.from(Array(4)).map((_) => {
           return (
             <div key={_} className='flex items-center gap-2'>
               <img

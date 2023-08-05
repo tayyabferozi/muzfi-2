@@ -1,7 +1,7 @@
 import Carousel from './carousel';
 import Details from './details';
 
-export default function MyGearRoom() {
+export default function NewGearPage() {
   return (
     <section className='grid-cols-2 gap-6 lg:grid'>
       <Carousel />
