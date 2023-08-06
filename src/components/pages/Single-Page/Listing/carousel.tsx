@@ -7,7 +7,7 @@ import 'swiper/css/thumbs';
 import 'swiper/css/zoom';
 
 import { FreeMode, Navigation, Thumbs, Zoom } from 'swiper';
-import { cn } from '../../../helpers/utils';
+import { cn } from '../../../../helpers/utils';
 
 const ThumbGallery = ({
   className,
