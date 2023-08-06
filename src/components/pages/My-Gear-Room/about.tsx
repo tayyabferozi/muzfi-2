@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import GradientBtn from '../../buttons/GradientBtn/GradientBtn';
+import Gallery from './gallery';
 
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -49,10 +50,10 @@ export default function About() {
               </span>
             }
             key={_.label}
-            className='flex '
           />
         ))}
       </div>
+      <Gallery />
     </section>
   );
 }
