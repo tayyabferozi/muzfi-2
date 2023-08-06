@@ -3,6 +3,7 @@ import YellowBtn from '../../buttons/YellowBtn/YellowBtn';
 import Card from '../../common/Card/Card';
 import { Stat } from './stat';
 import { RatingStars } from '../Single-Page/Listing/details';
+import About from './about';
 
 export default function MyGearRoom() {
   // This page will be 10. User Gear Page !! Not 9. Threads Etc
@@ -48,6 +49,8 @@ export default function MyGearRoom() {
           </button>
         ))}
       </div>
+      <hr />
+      <About />
     </Card>
   );
 }
