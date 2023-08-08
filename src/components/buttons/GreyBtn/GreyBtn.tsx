@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import clsx from 'clsx';
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 const GreyBtn = ({
   className,
@@ -13,11 +13,11 @@ const GreyBtn = ({
   return (
     <Link
       className={clsx(
-        'text-base font-medium flex items-center justify-center rounded-md bg-accentGray-400 hover:bg-accentGray-500 text-accentGray-700 transition-colors',
-        short ? 'h-[30px] px-3 text-sm' : 'h-[38px] px-[20px]',
+        "font-medium flex items-center justify-center rounded-md bg-accentGray-400 hover:bg-accentGray-500 text-accentGray-700 transition-colors text-sm border border-solid border-[rgba(134, 145, 168, 0.20)]",
+        short ? "h-[30px] px-3 text-sm" : "h-[38px] px-[20px]",
         className
       )}
-      to='/'
+      to="/"
     >
       {label}
     </Link>
