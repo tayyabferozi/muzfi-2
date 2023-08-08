@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 const chats = [
   {
     img: "/assets/imgs/home/user-img-6.png",
@@ -13,6 +15,7 @@ const chats = [
     img: "/assets/imgs/home/user-img-8.png",
     name: "Lauralee Quintero",
     msg: "Lorem Ipsum",
+    active: true,
   },
   {
     img: "/assets/imgs/home/user-img-9.png",
@@ -59,17 +62,24 @@ const ChatPeople = ({}: Props) => {
         return (
           <div
             key={"chat-" + idx}
-            className="flex justify-between items-start p-2 border-t border-solid border-accentGray-600"
+            className={clsx(
+              "flex justify-between items-start p-2 border-t border-solid border-accentGray-600 hover:bg-accentGray-400 transition-colors cursor-pointer",
+              el.active && "bg-accentGray-400"
+            )}
           >
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
               <img
-                className="w-[54px] h-[54px] rounded-[50%]"
+                className="w-[54px] h-[54px] rounded-[50%] flex-shrink-0"
                 src={el.img}
                 alt={el.name}
               />
               <div>
-                <div className="font-semibold text-sm">{el.name}</div>
-                <div className="text-accentGray-700">{el.msg}</div>
+                <div className="restrict-one-line font-semibold text-sm">
+                  {el.name}
+                </div>
+                <div className="restrict-one-line text-accentGray-700">
+                  {el.msg}
+                </div>
               </div>
             </div>
 

@@ -3,7 +3,7 @@ import GreyBtn from "../../../buttons/GreyBtn/GreyBtn";
 
 const Header = () => {
   return (
-    <div className="my-6 flex justify-between items-center">
+    <div className="my-[18px] sm:my-6 flex justify-between items-center">
       <div className="flex items-center gap-3 sm:gap-5 w-full sm:w-auto">
         <GradientBtn
           className="w-full flex-grow sm:flex-grow-0 sm:min-w-[120px]"

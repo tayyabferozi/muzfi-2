@@ -1,14 +1,16 @@
 import clsx from "clsx";
 import GradientBtn from "../../buttons/GradientBtn";
 import CreatePost from "./create-post-popover";
+import { JsxElement } from "typescript";
 
 interface Props {
   fullWidth?: boolean;
   noPost?: boolean;
   placeholder?: string;
+  extraComp?: React.ReactNode;
 }
 
-const Search = ({ fullWidth, placeholder, noPost }: Props) => {
+const Search = ({ fullWidth, placeholder, noPost, extraComp }: Props) => {
   return (
     <div className="flex gap-[10px] w-full">
       <div className="relative border-solid border-[1px] border-accentGray-600 h-[40px] rounded-lg overflow-hidden flex-grow">
@@ -37,6 +39,7 @@ const Search = ({ fullWidth, placeholder, noPost }: Props) => {
           />
         </CreatePost>
       )}
+      {extraComp && extraComp}
     </div>
   );
 };

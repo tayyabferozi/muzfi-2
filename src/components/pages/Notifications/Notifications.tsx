@@ -93,8 +93,8 @@ const Notifications = () => {
 
       <Header />
 
-      <div className="bg-white border border-solid border-accentGray-600 rounded-lg p-[18px]">
-        <div className="flex justify-between items-center pb-[18px]">
+      <div className="bg-white border border-solid border-accentGray-600 rounded-lg p-[10px] sm:p-[18px]">
+        <div className="justify-between items-center pb-[18px] sm:flex hidden">
           <h3 className="text-[22px] font-semibold">Earlier</h3>
         </div>
 
@@ -105,7 +105,10 @@ const Notifications = () => {
               <div
                 key={"notification" + idx}
                 className={clsx(
-                  "flex justify-between gap-3 p-[14px] border-t border-solid border-accentGray-400 transtion-all bg-transparent notification-item"
+                  "flex items-start justify-between gap-3 border-solid border-accentGray-400 transtion-all bg-transparent notification-item",
+                  idx === 0
+                    ? "sm:border-t pt-0 px-0 sm:px-[14px] p-[14px] sm:pt-[14px]"
+                    : "border-t py-[14px] px-0 sm:px-[14px]"
                 )}
               >
                 <div className="flex-shrink-0 relative">
