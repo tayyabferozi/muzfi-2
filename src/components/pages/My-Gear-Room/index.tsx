@@ -1,11 +1,13 @@
-import React from 'react'
-import ComingSoon from '../../common/Error/ComingSoon'
+import GearIHave from './gear-i-have';
+import GearRoomProfile from './profile';
 
-const index = () => {
-// This page will be 10. User Gear Page !! Not 9. Threads Etc
+export default function MyGearRoom() {
+  // This page will be 10. User Gear Page !! Not 9. Threads Etc
+
   return (
-    <div><ComingSoon/></div>
-  )
+    <>
+      <GearRoomProfile />
+      <GearIHave />
+    </>
+  );
 }
-
-export default index
