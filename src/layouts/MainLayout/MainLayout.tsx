@@ -43,6 +43,7 @@ const MainLayout = () => {
           </div>
         </div>
 
+
         {!pathname.includes("for-sale") &&
           !pathname.includes("about") &&
           !pathname.includes("my-gearroom") && (
@@ -50,6 +51,7 @@ const MainLayout = () => {
               <Ad /> <Explore />{" "}
             </div>
           )}
+
       </div>
     </div>
   );

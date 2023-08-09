@@ -1,6 +1,6 @@
 export function Benefits({ el, idx }: { el: any; idx: number }) {
   return (
-    <div className='mt-[18px] flex sm:flex-row flex-col items-center justify-center gap-[18px]'>
+    <div className='mt-[18px] flex sm:flex-row flex-col items-center justify-center gap-[5px]'>
       {data.map((_) => (
         <div
           key={_.label}
@@ -11,7 +11,7 @@ export function Benefits({ el, idx }: { el: any; idx: number }) {
             {Array.from(Array(5)).map((el2, idx2) => {
               return (
                 <img
-                  className='w-[10px] h-[10px]'
+                  className='w-[18px] h-[12px]'
                   key={'home-post-usability-star' + idx + '-' + idx2}
                   src='/assets/vectors/common/star.svg'
                   alt='star'
@@ -30,5 +30,5 @@ const data = [
   { label: 'Usability' },
   { label: 'Expectation' },
   { label: 'Performance' },
-  { label: 'Performance' },
+  { label: 'Longivety' },
 ];
