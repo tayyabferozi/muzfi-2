@@ -23,12 +23,12 @@ const Navbar = ({
   const navItems = useMemo(() => {
     if (isLogin)
       return [
-        { icon: "/assets/imgs/home/messages.png", href: "" },
+        { icon: "/assets/imgs/home/messages.png", href: "/messages" },
         { icon: "/assets/imgs/home/likes.png", href: "" },
-        { icon: "/assets/imgs/home/singers.png", href: "" },
-        { icon: "/assets/imgs/home/notification.png", href: "" },
+        { icon: "/assets/imgs/home/singers.png", href: "/browse" },
+        { icon: "/assets/imgs/home/notification.png", href: "/notifications" },
       ];
-    return [{ icon: "/assets/imgs/home/singers.png", href: "" }];
+    return [{ icon: "/assets/imgs/home/singers.png", href: "/browse" }];
   }, [isLogin]);
   return (
     <nav className="fixed inset-x-0 top-0 z-50 shadow-lg bg-primary">
