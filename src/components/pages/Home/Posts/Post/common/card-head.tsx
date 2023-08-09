@@ -1,5 +1,5 @@
-import friendlyTime from '../../../../../helpers/friendlyTime';
-import YellowBtn from '../../../../buttons/YellowBtn';
+import friendlyTime from '../../../../../../helpers/friendlyTime';
+import YellowBtn from '../../../../../buttons/YellowBtn';
 
 export function CardHead({ el }: { el: any }) {
   return (
