@@ -21,7 +21,7 @@ const Listing = ({ el, idx }: { el: any; idx: number }) => {
         </div>
       </div>
 
-      <div className='grid grid-cols-4 gap-2 my-1'>
+      <div className='grid grid-cols-4 gap-2 my-1 max-sm:grid-cols-3'>
         {data.map((_) => (
           <div
             key={_.text}
@@ -40,11 +40,11 @@ const Listing = ({ el, idx }: { el: any; idx: number }) => {
             </div>
           </div>
         ))}
-        <div className='flex flex-col items-center justify-between w-full gap-2'>
+        <div className='flex items-center justify-between w-full gap-2 max-sm:col-span-full sm:flex-col'>
           <div className='flex gap-2'>
             <button
               className={clsx(
-                'border border-solid border-accentYellow-300 transition-transform hover:scale-105 bg-accentGray-900 rounded-lg w-6 h-6 inline-flex justify-center items-center'
+                'border min-w-[38px] border-solid border-accentYellow-300 transition-transform hover:scale-105 bg-accentGray-900 rounded-lg h-6 inline-flex justify-center items-center'
               )}
             >
               <img
@@ -54,7 +54,7 @@ const Listing = ({ el, idx }: { el: any; idx: number }) => {
               />
             </button>
 
-            <button className='h-6 transition-transform hover:scale-105 bg-accentGray-900 rounded-lg border border-solid border-accentYellow-300 text-[10px] font-medium px-4'>
+            <button className='h-6 min-w-[100px] transition-transform hover:scale-105 bg-accentGray-900 rounded-lg border border-solid border-accentYellow-300 text-[10px] font-medium px-4'>
               Make an offer
             </button>
           </div>
