@@ -8,7 +8,7 @@ export default function ListingPage() {
     <section>
       <div className='grid-cols-2 gap-6 lg:grid'>
         <Carousel />
-        <Details />
+        <Details isListing />
       </div>
     </section>
   );
