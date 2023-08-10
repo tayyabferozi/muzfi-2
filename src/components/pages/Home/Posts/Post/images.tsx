@@ -9,11 +9,11 @@ export function Images({
 }) {
   if (!imgs) return null;
   return (
-    <div className='flex flex-wrap gap-2 mt-3 sm:flex-nowrap'>
+    <div className='flex gap-2 mt-3 flex-nowrap'>
       {imgs?.map((el2: any, idx2: any) => {
         return (
           <div
-            className='relative flex-grow h-[90px]'
+            className='relative flex-grow h-[90px] max-sm:h-auto max-sm:aspect-square'
             key={'home-post-img' + idx + '-' + idx2}
           >
             {idx2 === length - 1 && (
