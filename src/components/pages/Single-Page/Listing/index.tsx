@@ -1,3 +1,4 @@
+import AboutTabs from './about-tabs';
 import Carousel from './carousel';
 import Details from './details';
 
@@ -10,6 +11,7 @@ export default function ListingPage() {
         <Carousel />
         <Details isListing />
       </div>
+      <AboutTabs />
     </section>
   );
 }
