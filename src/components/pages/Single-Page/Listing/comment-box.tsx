@@ -4,11 +4,13 @@ import { cn } from '../../../../helpers/utils';
 
 interface CommentBoxProps extends HTMLAttributes<HTMLDivElement> {
   reply?: boolean;
+  closeInputBox?: () => void;
 }
 
 export default function CommentBox({
   className,
   reply,
+  closeInputBox,
   ...props
 }: CommentBoxProps) {
   const Comp = reply ? 'input' : 'textarea';
@@ -32,7 +34,9 @@ export default function CommentBox({
           rows={3}
           className='w-full border rounded p-2.5 min-h-[40px] bg-zinc-100 border-slate-400/20'
         />
-        <GradientBtn label={'send'} className={'w-32 mt-4 ml-auto'} />
+        <div onClick={closeInputBox} className={' mt-4 ml-auto w-fit'}>
+          <GradientBtn label={'send'} className={'w-32'} />
+        </div>
       </div>
     </section>
   );

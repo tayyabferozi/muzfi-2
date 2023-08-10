@@ -7,6 +7,7 @@ interface CommentProps extends HTMLAttributes<HTMLDivElement> {}
 
 export default function Comment({ className, ...props }: CommentProps) {
   const [count, setCount] = useState(Math.round(Math.random() * 10));
+  const [reply, setReply] = useState(false);
   return (
     <div
       className={cn(
@@ -25,6 +26,7 @@ export default function Comment({ className, ...props }: CommentProps) {
         </aside>
         <p className='text-sm font-medium grow'>ramsesmiron</p>
         <p
+          onClick={() => setReply(true)}
           role='button'
           className='flex items-center gap-2 text-xs font-medium text-blue-700'
         >
@@ -46,7 +48,7 @@ export default function Comment({ className, ...props }: CommentProps) {
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
-          <CommentBox className='sm:hidden' reply />
+          {reply && <CommentBox reply closeInputBox={() => setReply(false)} />}
         </div>
       </div>
     </div>
