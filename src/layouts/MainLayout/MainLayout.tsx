@@ -43,13 +43,15 @@ const MainLayout = () => {
           </div>
         </div>
 
+
         {!pathname.includes("for-sale") &&
-          !pathname.includes("about") &&
-          !pathname.includes("my-gearroom") && (
+          !pathname.includes("about") 
+          && (
             <div className="lg:min-w-[300px] bg-white rounded-lg scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   ">
               <Ad /> <Explore />{" "}
             </div>
           )}
+
       </div>
     </div>
   );
