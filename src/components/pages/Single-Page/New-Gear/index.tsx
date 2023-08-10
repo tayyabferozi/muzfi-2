@@ -10,7 +10,7 @@ export default function NewGearPage() {
     <section>
       <div className='grid-cols-2 gap-6 lg:grid'>
         <ThumbGallery />
-        <Details isListing />
+        <Details />
       </div>
       <AboutTabs />
       <div className='grid grid-cols-2 gap-5 md:bg-zinc-300 md:p-3.5 rounded-lg lg:grid-cols-4'>

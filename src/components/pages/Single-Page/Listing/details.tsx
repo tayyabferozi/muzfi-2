@@ -45,7 +45,7 @@ export default function Details({ isListing }: { isListing?: boolean }) {
           </div>
         </div>
         {!isListing && (
-          <div className='flex gap-2.5'>
+          <div className='flex gap-2.5 mt-2.5 items-center'>
             <Icon
               icon={'uil:bolt-alt'}
               className='p-1.5 text-4xl bg-white h-fit rounded-full'
@@ -61,7 +61,9 @@ export default function Details({ isListing }: { isListing?: boolean }) {
           </div>
         )}
         <div className='flex items-center mt-3.5 gap-2'>
-          <p className='font-medium'>Product condition :-</p>
+          <p className='font-medium'>
+            {isListing ? 'Product condition' : 'Gear Status'} :-
+          </p>
           <button className='w-[70px] h-10 bg-white text-yellow-500 font-semibold rounded-lg border border-slate-400/20'>
             Great
           </button>
@@ -70,24 +72,30 @@ export default function Details({ isListing }: { isListing?: boolean }) {
           <p className='text-[28px] font-semibold'>$ 800</p>{' '}
           <p className='text-lg line-through text-neutral-400'>$ 918</p>
         </div>
-        <div className='text-sm font-medium text-neutral-400 [&>b]:pl-1 [&>b]:pr-2'>
-          Time of arrival:
-          <b>5 Days</b> Listed: <b>1 Week Ago</b> Views: <b>213</b>
-          Offers: <b>2</b>
-        </div>
+        {isListing && (
+          <div className='text-sm font-medium text-neutral-400 [&>b]:pl-1 [&>b]:pr-2'>
+            Time of arrival:
+            <b>5 Days</b> Listed: <b>1 Week Ago</b> Views: <b>213</b>
+            Offers: <b>2</b>
+          </div>
+        )}
         <Quantity />
         <div className='flex flex-col gap-3 [&_*]:text-black'>
           <GradientBtn
-            label={'Buy It now'}
+            label={isListing ? 'Buy It now' : 'I have this'}
             className={'w-full [&_*]:!text-white max-w-xs'}
           />
           <div className={'w-full max-w-xs flex [&_a]:w-full gap-3'}>
             <GreyBtn
               label={
-                <span className='flex gap-2'>
-                  <Icon icon='uil:cart' className='text-xl' />
-                  Add to cart
-                </span>
+                isListing ? (
+                  <span className='flex gap-2'>
+                    <Icon icon='uil:cart' className='text-xl' />
+                    Add to cart
+                  </span>
+                ) : (
+                  'Message Seller'
+                )
               }
               className={'border'}
             />
@@ -95,13 +103,17 @@ export default function Details({ isListing }: { isListing?: boolean }) {
           </div>{' '}
           <GreyBtn
             label={
-              <span className='flex items-center gap-2'>
-                <Icon
-                  icon={'material-symbols:list-alt-add-outline'}
-                  className='text-xl'
-                />
-                Add to cart
-              </span>
+              isListing ? (
+                <span className='flex items-center gap-2'>
+                  <Icon
+                    icon={'material-symbols:list-alt-add-outline'}
+                    className='text-xl'
+                  />
+                  Add to cart
+                </span>
+              ) : (
+                'View more from this shop'
+              )
             }
             className={'w-full max-w-xs border'}
           />
