@@ -4,7 +4,7 @@ import CommunityItems from "./CommunityItems";
 import Wrapper from "../../../layouts/MainLayout/wrapper";
 import Categories from "../Home/Categories";
 import Category from "./category";
-import Filter from "./Filter";
+// import Filter from "./Filter";
 
 const Community = () => {
   // ADD Communities Page(2. Browse Communities) Here ----- This is the "Browse" Tab on Left Panel
@@ -16,7 +16,7 @@ const Community = () => {
       <Category category={category} />
       <Wrapper>
         <Categories />
-        <Filter />
+        {/* <Filter /> */}
         <CommunityItems />
       </Wrapper>
     </div>
