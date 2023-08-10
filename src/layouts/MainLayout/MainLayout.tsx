@@ -36,8 +36,8 @@ const MainLayout = () => {
               })}
             >
               {/* <div className='mb-5 lg:hidden'>
-          <Search />
-        </div> */}
+                 <Search />
+               </div> */}
               <Outlet />
             </div>
           </div>
@@ -45,6 +45,7 @@ const MainLayout = () => {
 
         {!pathname.includes('for-sale') &&
           !pathname.includes('about') &&
+          !pathname.includes('single/new-gear') &&
           !pathname.includes('single/listing') && (
             <div className='lg:min-w-[300px] bg-white rounded-lg scrollbar-hide 2xl:max-w-[330px] lg:max-w-[320px]   '>
               <Ad /> <Explore />{' '}
