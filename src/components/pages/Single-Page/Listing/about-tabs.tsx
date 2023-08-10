@@ -11,14 +11,8 @@ export default function AboutTabs() {
             key={tab}
           >
             {tab}
-            <div
-              className='absolute bottom-0 hidden w-10 h-6 group-aria-selected:block rounded-bl-xl left-full'
-              style={{ boxShadow: '-10px 0 #fff' }}
-            />
-            <div
-              className='absolute bottom-0 hidden w-10 h-6 group-aria-selected:block rounded-br-xl right-full'
-              style={{ boxShadow: '10px 0 #fff' }}
-            />
+            <div className='absolute bottom-0 hidden shadow-[-10px_0_white] w-10 h-6 group-aria-selected:block rounded-bl-xl left-full' />
+            <div className='absolute bottom-0 hidden w-10 shadow-[10px_0_white] h-6 group-aria-selected:block rounded-br-xl right-full' />
           </Tabs.Trigger>
         ))}
       </Tabs.List>
