@@ -1,5 +1,6 @@
 import AboutTabs from './about-tabs';
 import Carousel from './carousel';
+import CommentSection from './comment-section';
 import Details from './details';
 import PaymentSection from './payment-section';
 
@@ -14,6 +15,7 @@ export default function ListingPage() {
       </div>
       <AboutTabs />
       <PaymentSection />
+      <CommentSection />
     </section>
   );
 }
