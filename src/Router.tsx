@@ -26,6 +26,13 @@ import TopicPage from "./components/pages/Single-Page/Topic";
 import ListingPage from "./components/pages/Single-Page/Listing";
 import Messages from "./components/pages/Messages";
 import Notifications from "./components/pages/Notifications";
+import Checkout from "./components/pages/Checkout";
+import MiniLayout from "./layouts/MinLayout";
+import SettingsLayout from "./components/pages/Settings/SettingsLayout";
+import Account from "./components/pages/Settings/Account";
+import NotificationsSettings from "./components/pages/Settings/Notifications";
+import Chat from "./components/pages/Settings/Chat";
+import Safety from "./components/pages/Settings/Safety";
 
 const AppRouter = () => {
   return (
@@ -65,6 +72,15 @@ const AppRouter = () => {
           <Route path="/messages" element={<Messages />} />
           <Route path="/notifications" element={<Notifications />} />
           {/* <Route path="/auth" element={<Auth isModalActive={hidden.value} />} /> */}
+        </Route>
+        <Route path="/" element={<MiniLayout />}>
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="settings" element={<SettingsLayout />}>
+            <Route path="account" element={<Account />} />
+            <Route path="notifications" element={<NotificationsSettings />} />
+            <Route path="chat" element={<Chat />} />
+            <Route path="safety" element={<Safety />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

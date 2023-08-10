@@ -18,6 +18,8 @@ module.exports = {
           600: "#ffc622",
         },
         accentGray: {
+          40: "#F9F9F9",
+          50: "#F6F6F6",
           100: "#A6A6A6",
           200: "#5E5E5E",
           300: "#8A8A8A",
@@ -37,6 +39,7 @@ module.exports = {
         },
         accentGreen: {
           500: "#3AB549",
+          600: "#66C600",
         },
       },
     },
