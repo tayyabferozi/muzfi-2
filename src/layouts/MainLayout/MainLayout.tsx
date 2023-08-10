@@ -22,7 +22,7 @@ const MainLayout = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
       <Auth isModalActive={hidden.value} type={type.value} />
-      <div className='container [&>*]:overflow-auto pb-0 [&>*]:h-[calc(100vh-111px)] [&>*]:pb-6 flex flex-col gap-4 p-6 2xl:gap-5 bg-accentGray-500 lg:flex-row pt-28'>
+      <div className='container [&>*]:overflow-auto pb-0 [&>*]:h-[calc(100vh-111px)] [&>*]:pb-6 flex flex-col gap-4 sm:p-6 2xl:gap-5 bg-accentGray-500 lg:flex-row pt-28'>
         <Sidebar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
