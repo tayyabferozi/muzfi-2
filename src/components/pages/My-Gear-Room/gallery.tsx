@@ -1,6 +1,6 @@
 export default function Gallery() {
   return (
-    <div className='flex flex-wrap gap-2 mt-3 sm:flex-nowrap'>
+    <div className='grid grid-cols-2 gap-2 mt-3 sm:grid-cols-4 sm:flex-nowrap'>
       {imgs?.map((el) => {
         return (
           <div className='relative flex-grow'>
@@ -9,7 +9,7 @@ export default function Gallery() {
               src={el.img}
               alt='product'
             />
-            <div className='absolute inset-0 flex flex-col items-center justify-center gap-6 font-semibold text-white mt-14 img-overlay'>
+            <div className='absolute inset-0 flex flex-col items-center justify-center gap-4 mt-8 font-semibold text-white img-overlay'>
               <p className=' text-[28px]'>{el.value}</p>
               <p className='text-lg'>{el.label}</p>
             </div>
