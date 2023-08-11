@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 const Card = ({
   noMt,
@@ -12,8 +12,9 @@ const Card = ({
   return (
     <div
       className={clsx(
-        'border-[1px] border-solid w-full border-accentGray-600 rounded-lg bg-white p-[10px]',
-        !noMt && 'mt-3',
+        "border-[1px] border-solid w-full border-accentGray-600 rounded-lg bg-white",
+        !className?.includes("p-") && "p-[10px]",
+        !noMt && "mt-3",
         className
       )}
     >
