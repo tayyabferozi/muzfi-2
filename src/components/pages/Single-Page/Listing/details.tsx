@@ -109,10 +109,10 @@ export default function Details({ isListing }: { isListing?: boolean }) {
                     icon={'material-symbols:list-alt-add-outline'}
                     className='text-xl'
                   />
-                  Add to cart
+                  View More from Seller
                 </span>
               ) : (
-                'View more from this shop'
+                'View User Collection'
               )
             }
             className={'w-full max-w-xs border'}

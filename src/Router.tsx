@@ -40,20 +40,18 @@ const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />}>
           {/* <Route path='/auth' element={<Auth isModalActive={hidden.value} type={type.value} />}/> */}
           <Route index element={<Home />} />
 
-          <Route path="/single/listing" element={<ListingPage />} /> // 9.
-          Thread Single Page: listing page
-          <Route path="/single/new-gear" element={<NewGearPage />} /> //
-          9.Thread Single Page: New-Gear Page
-          <Route path="/single/poll" element={<PollsPage />} /> // 9. Thread
-          Single Page: Poll
+          <Route path="/single/listing" element={<ListingPage />} />
+          <Route path="/single/new-gear" element={<NewGearPage />} />
+          <Route path="/single/poll" element={<PollsPage />} />
           <Route path="/single/topic" element={<TopicPage />} />
-          // 9 Thread Single Page: Topic
+
           <Route path="/browse" element={<Community />} />
           <Route path="/browse/single" element={<CommunityPage />} />
+
           <Route path="/my-gearroom" element={<MyGearRoom />} />
           <Route path="/for-sale" element={<ForSale />} />
           <Route path="user/for-sale" element={<ForSale />} />
@@ -71,10 +69,16 @@ const AppRouter = () => {
             <Route path="/create/topic" element={<Topic />} />
             <Route path="/create/new-gear" element={<NewGear />} />
             <Route path="/create/polls" element={<Polls />} />
-
           </Route>
           <Route path="/messages" element={<Messages />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/settings" element={<SettingsLayout />}>
+            <Route path="account" element={<Account />} />
+            <Route path="notifications" element={<NotificationsSettings />} />
+            <Route path="chat" element={<Chat />} />
+            <Route path="safety" element={<Safety />} />
+          </Route>
           {/* <Route path="/auth" element={<Auth isModalActive={hidden.value} />} /> */}
         </Route>
         <Route path="/" element={<MiniLayout />}>
