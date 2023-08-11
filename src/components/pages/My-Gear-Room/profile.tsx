@@ -8,19 +8,19 @@ import { Stat } from './stat';
 export default function GearRoomProfile() {
   return (
     <Card>
-      <p className=' text-[22px] font-semibold'>Jason’s Gear Room</p>
+      <p className=' text-[22px] font-semibold'>Pierre’s Gear Room</p>
       <div className='flex gap-4 mt-4'>
         <img
           className='w-32 rounded-lg md:w-44 aspect-square'
           src='https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
           alt=''
         />
-        <div className='flex flex-wrap items-center justify-between grow'>
-          <div>
-            <p className='text-lg font-semibold '>Mr.keys121</p>
+        <div className='flex flex-wrap items-center grow'>
+          <div className='mr-3'>
+            <p className='text-lg font-semibold '>PBASS003</p>
             <p className='flex items-center gap-1 text-xs font-medium text-neutral-400'>
               <Icon icon={'fluent:location-12-regular'} className='text-base' />{' '}
-              Damascus, OR, United States3
+              Hartford, CT, USA
             </p>
           </div>
           <YellowBtn className='px-4 ' label={'Follow'} />
