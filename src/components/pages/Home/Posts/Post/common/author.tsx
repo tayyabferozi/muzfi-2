@@ -12,16 +12,20 @@ export function Author({
 }) {
   return (
     <>
+
       <div className="flex flex-wrap items-center justify-between gap-4 mt-1">
         <div className="flex gap-3">
+
           <img
             className="w-[40px] h-[40px] rounded-[50%]"
             src={el.authorImg}
             alt={el.authorName}
           />
           <div>
+
             <div className="font-semibold">{el.authorName}</div>
             <div className="flex items-center ">
+
               {new Array(el.authorRating).fill(0).map((el2, idx2) => {
                 return (
                   <img
@@ -38,11 +42,12 @@ export function Author({
               </div>
             </div>
 
+
        
               <div className="text-accentGray-700 text-[10px] font-medium">
                 {el.location}
               </div>
-       
+
             {el.newGear && el.type === "prod-gear" && (
               <div className="text-[9px] font-semibold">New Gear !</div>
             )}
@@ -78,7 +83,7 @@ export function Author({
               )
             : null}
         </div>
-  
+
       </div>
     </>
   );

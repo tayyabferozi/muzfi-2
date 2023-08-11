@@ -6,6 +6,7 @@ import { Author } from "../common/author";
 import { CardFooter } from "../common/card-footer";
 import { Images } from "../common/images";
 import { User } from "../common/user";
+
 import { Link } from "react-router-dom";
 
 const Listing = ({ el, idx }: { el: any; idx: number }) => {
@@ -78,6 +79,7 @@ const Listing = ({ el, idx }: { el: any; idx: number }) => {
         <CardFooter el={el} idx={idx} />
       </Card>
     </Link>
+
   );
 };
 
