@@ -21,8 +21,8 @@ export default function Filter() {
 }
 
 const data = [
-  { label: "Fitler", desc: "Top" }, // Size, latest, hot market, age,  etc
-  { label: "Sub", desc: "Gibson Les Paul" },
-  { label: "Genre", desc: "None" },
+  { label: "Categories", desc: "Keys/Painos/Synths" }, // Size, latest, hot market, age,  etc
+  { label: "Sub-Communities", desc: "Gigging/Live" },
+  { label: "Genre", desc: "Pop" },
   { label: "Type", desc: "Public" },
 ];

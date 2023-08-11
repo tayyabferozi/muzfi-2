@@ -36,7 +36,7 @@ export default function GearRoomProfile() {
           </div>
         ))}
       </div>
-      <div className='flex justify-center my-3 gap-7'>
+      <div className='flex justify-center my-3 gap-7 max-sm:hidden'>
         {action.map((_) => (
           <button
             key={_.label}

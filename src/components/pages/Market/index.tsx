@@ -32,13 +32,6 @@ const ForSale = () => {
 export default ForSale;
 const options = [{ label: "hello" }, { label: "world" }];
 
-const tags = [
-  "Brand",
-  "Country/Region of Manufacturer",
-  "Series",
-  "String Configuration",
-  "Body Color",
-  "Condition",
-  "Price",
-  "Buying Format",
-];
+
+const tags = ["Condition", "Brands", "Price", "Location", "Buying Format"];
+

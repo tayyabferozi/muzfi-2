@@ -1,6 +1,9 @@
 import { Icon } from "@iconify/react";
 import Select from "../../common/Selectors/select";
 
+import SortbySelect from "../../common/Selectors/sortbyselect";
+
+
 export default function ForSaleTopBar() {
   return (
     <section>
@@ -15,9 +18,11 @@ export default function ForSaleTopBar() {
           </button>
           <button>My Store</button>
         </div>
-        <Select
+        <SortbySelect
           options={options}
-          placeholder="Sort by: Most Recent First"
+
+          placeholder="Best Match"
+
           className="w-full bg-zinc-100"
         />
         <div className="flex items-center grow border rounded-md bg-zinc-100 p-2.5 gap-3  border-slate-400/20">
@@ -32,4 +37,11 @@ export default function ForSaleTopBar() {
   );
 }
 
-const options = [{ label: "hello" }, { label: "world" }];
+
+const options = [
+  { label: "Best Match" },
+  { label: "Most Recent First" },
+  { label: "Price Low to High" },
+  { label: "Price High to Low" },
+];
+

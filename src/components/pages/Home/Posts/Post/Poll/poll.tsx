@@ -23,7 +23,9 @@ const Poll = ({ el, idx }: { el: any; idx: number }) => {
           {el.options.map((el2: any, idx2: any) => {
             return (
               <div
+
                 className="flex items-center bg-accentGray-400 text-lg py-3 px-3 rounded-[10px] mb-[10px]"
+
                 key={"home-post-option" + idx + "-" + idx2}
               >
                 <input

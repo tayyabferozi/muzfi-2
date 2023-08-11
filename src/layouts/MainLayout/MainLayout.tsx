@@ -22,7 +22,9 @@ const MainLayout = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
       <Auth isModalActive={hidden.value} type={type.value} />
+
       <div className="container [&>*]:overflow-auto pb-0 [&>*]:h-[calc(100vh-111px)] [&>*]:pb-6 flex flex-col gap-4 p-6 2xl:gap-5 bg-accentGray-500 lg:flex-row pt-24">
+
         <Sidebar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
@@ -36,12 +38,13 @@ const MainLayout = () => {
               })}
             >
               {/* <div className='mb-5 lg:hidden'>
-          <Search />
-        </div> */}
+                 <Search />
+               </div> */}
               <Outlet />
             </div>
           </div>
         </div>
+
 
 
         {!pathname.includes("for-sale") &&
@@ -51,6 +54,7 @@ const MainLayout = () => {
               <Ad /> <Explore />{" "}
             </div>
           )}
+
 
       </div>
     </div>
