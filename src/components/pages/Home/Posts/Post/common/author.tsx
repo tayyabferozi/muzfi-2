@@ -12,16 +12,20 @@ export function Author({
 }) {
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between gap-4 mt-3">
-        <div className="flex gap-4">
+
+      <div className="flex flex-wrap items-center justify-between gap-4 mt-1">
+        <div className="flex gap-3">
+
           <img
             className="w-[40px] h-[40px] rounded-[50%]"
             src={el.authorImg}
             alt={el.authorName}
           />
           <div>
-            <div className="text-base font-semibold">{el.authorName}</div>
-            <div className="flex items-center gap-[3px] mt-[2px]">
+
+            <div className="font-semibold">{el.authorName}</div>
+            <div className="flex items-center ">
+
               {new Array(el.authorRating).fill(0).map((el2, idx2) => {
                 return (
                   <img
@@ -38,11 +42,12 @@ export function Author({
               </div>
             </div>
 
-            {(el.type === "prod-gear" || el.type === "prod-sale") && (
-              <div className="text-accentGray-700 text-[10px] font-medium mt-1">
+
+       
+              <div className="text-accentGray-700 text-[10px] font-medium">
                 {el.location}
               </div>
-            )}
+
             {el.newGear && el.type === "prod-gear" && (
               <div className="text-[9px] font-semibold">New Gear !</div>
             )}
@@ -78,18 +83,7 @@ export function Author({
               )
             : null}
         </div>
-        {(el.type === "prod-poll" || topic) && (
-          <div className="flex flex-col items-end">
-            <Icon
-              role="button"
-              icon="majesticons:more-menu-line"
-              className="text-2xl"
-            />
-            <div className="mt-1 text-xs font-medium text-accentGray-700">
-              {el.location}
-            </div>
-          </div>
-        )}
+
       </div>
     </>
   );

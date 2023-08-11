@@ -1,8 +1,8 @@
 import * as RdxSelect from '@radix-ui/react-select';
 import { HtmlHTMLAttributes, useState } from 'react';
-import { cn } from '../../helpers/utils';
+import { cn } from '../../../helpers/utils';
 
-export default function Select({
+export default function SortbySelect({
   options,
   ...props
 }: {
@@ -22,7 +22,7 @@ export default function Select({
           )}
         >
           <RdxSelect.Value className='whitespace-nowrap'>
-            {value}
+            Sort By: {value}
           </RdxSelect.Value>
           <RdxSelect.Icon>
             <svg
