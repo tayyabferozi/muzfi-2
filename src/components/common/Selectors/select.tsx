@@ -1,6 +1,6 @@
 import * as RdxSelect from "@radix-ui/react-select";
 import { HtmlHTMLAttributes, useState } from "react";
-import { cn } from "../../helpers/utils";
+import { cn } from "../../../helpers/utils";
 
 export default function Select({
   options,

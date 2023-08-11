@@ -1,7 +1,7 @@
 import GradientBtn from "../../buttons/GradientBtn/GradientBtn";
 import Card from "../../common/Card";
 import Checkbox from "../../common/Checkbox";
-import Select from "../../common/select2";
+import Select from "../../common/Selectors/select2";
 
 const months = [
   {
