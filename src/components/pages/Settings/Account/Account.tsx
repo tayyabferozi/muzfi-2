@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Card from "../../../common/Card";
-import Select from "../../../common/select2";
+import Select from "../../../common/Selectors/select2";
 import BlueOutlineBtn from "../../../buttons/BlueOutlineBtn";
 import RedOutlineBtn from "../../../buttons/RedOutlineBtn";
 import Switch from "../../../common/Switch";

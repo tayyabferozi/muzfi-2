@@ -40,13 +40,13 @@ export default function About() {
           </>
         )}
       </div>
-      <div className='flex justify-center gap-5 my-3'>
+      <div className='grid justify-center grid-cols-2 gap-5 my-3 sm:grid-cols-4'>
         {action.map((_) => (
           <GradientBtn
             label={
               <span className='flex items-center gap-1.5'>
                 <Icon icon={_.icon} className='text-xl' />
-                <p className='font-bold '>{_.label}</p>
+                <p className='font-bold whitespace-nowrap'>{_.label}</p>
               </span>
             }
             key={_.label}
