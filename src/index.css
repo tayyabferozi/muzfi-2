@@ -111,3 +111,9 @@ h5 {
 .hidden-scrollbar::-webkit-scrollbar {
   height: 0;
 }
+
+.text-primary-gradient {
+  background: -webkit-linear-gradient(30deg, #eab308, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import Card from "../../../common/Card";
-import Select from "../../../common/select2";
 import BlueOutlineBtn from "../../../buttons/BlueOutlineBtn";
-import RedOutlineBtn from "../../../buttons/RedOutlineBtn";
 import Switch from "../../../common/Switch";
-import { Input } from "../../../common/input";
 
 const Account = () => {
   return (

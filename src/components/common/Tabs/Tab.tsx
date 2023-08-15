@@ -1,13 +1,13 @@
 import clsx from "clsx";
 import { Link, useMatch } from "react-router-dom";
 
-interface Props {
+export interface TabProps {
   to: string;
   icon: string;
   label: string;
 }
 
-const Tab = ({ to, icon, label }: Props) => {
+const Tab = ({ to, icon, label }: TabProps) => {
   const isUserRoute = useMatch(to);
 
   return (

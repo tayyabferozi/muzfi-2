@@ -1,15 +1,14 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import Community from './components/pages/Community';
-import CommunityPage from './components/pages/Community/Community-Page';
-import Listing from './components/pages/Create-Post/Listing';
-import NewGear from './components/pages/Create-Post/NewGear';
-import Polls from './components/pages/Create-Post/Polls';
-import Topic from './components/pages/Create-Post/Topic';
-import Home from './components/pages/Home/Home';
-import MainLayout from './layouts/MainLayout';
-import TabsWrapper from './layouts/MainLayout/tabs-wrapper';
-
+import Community from "./components/pages/Community";
+import CommunityPage from "./components/pages/Community/Community-Page";
+import Listing from "./components/pages/Create-Post/Listing";
+import NewGear from "./components/pages/Create-Post/NewGear";
+import Polls from "./components/pages/Create-Post/Polls";
+import Topic from "./components/pages/Create-Post/Topic";
+import Home from "./components/pages/Home/Home";
+import MainLayout from "./layouts/MainLayout";
+import TabsWrapper from "./layouts/MainLayout/tabs-wrapper";
 
 import ForSale from "./components/pages/Market";
 import GearCatalog from "./components/pages/Gear-Catalog";
@@ -30,20 +29,24 @@ import Notifications from "./components/pages/Notifications";
 import Checkout from "./components/pages/Checkout";
 import MiniLayout from "./layouts/MinLayout";
 import SettingsLayout from "./components/pages/Settings/SettingsLayout";
+import TransactionsLayout from "./components/pages/Transactions/TransactionsLayout";
 import Account from "./components/pages/Settings/Account";
 import NotificationsSettings from "./components/pages/Settings/Notifications";
 import Chat from "./components/pages/Settings/Chat";
 import Safety from "./components/pages/Settings/Safety";
-
+import Profile from "./components/pages/Settings/Profile";
+import Subscriptions from "./components/pages/Settings/Subscriptions";
+import Purchases from "./components/pages/Transactions/Purchases";
+import Earnings from "./components/pages/Transactions/Earnings";
+import MyBill from "./components/pages/Transactions/MyBill";
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />}>
           {/* <Route path='/auth' element={<Auth isModalActive={hidden.value} type={type.value} />}/> */}
           <Route index element={<Home />} />
-
           <Route path="/single/listing" element={<ListingPage />} /> // 9.
           Thread Single Page: listing page
           <Route path="/single/new-gear" element={<NewGearPage />} /> //
@@ -71,7 +74,6 @@ const AppRouter = () => {
             <Route path="/create/topic" element={<Topic />} />
             <Route path="/create/new-gear" element={<NewGear />} />
             <Route path="/create/polls" element={<Polls />} />
-
           </Route>
           <Route path="/messages" element={<Messages />} />
           <Route path="/notifications" element={<Notifications />} />
@@ -81,9 +83,16 @@ const AppRouter = () => {
           <Route path="checkout" element={<Checkout />} />
           <Route path="settings" element={<SettingsLayout />}>
             <Route path="account" element={<Account />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="subscriptions" element={<Subscriptions />} />
             <Route path="notifications" element={<NotificationsSettings />} />
             <Route path="chat" element={<Chat />} />
             <Route path="safety" element={<Safety />} />
+          </Route>
+          <Route path="transactions" element={<TransactionsLayout />}>
+            <Route path="purchases" element={<Purchases />} />
+            <Route path="earnings" element={<Earnings />} />
+            <Route path="my-bill" element={<MyBill />} />
           </Route>
         </Route>
       </Routes>

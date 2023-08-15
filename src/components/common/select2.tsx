@@ -23,6 +23,7 @@ interface SelectProps {
   long?: boolean;
   light?: boolean;
   placeholder?: string;
+  fullWidth?: boolean;
 }
 
 const Select = ({
@@ -37,6 +38,7 @@ const Select = ({
   long,
   light,
   placeholder,
+  fullWidth,
 }: SelectProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
@@ -65,6 +67,7 @@ const Select = ({
       className={clsx(
         "flex flex-col",
         long ? "min-w-[210px]" : "min-w-[90px]",
+        fullWidth && "w-full",
         disabled && "opacity-50 cursor-not-allowed pointer-events-none"
       )}
     >
