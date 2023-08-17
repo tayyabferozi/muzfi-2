@@ -1,4 +1,4 @@
-const purchasesData = [
+const ordersData = [
   {
     identifier: 16999535,
     date: "03-09-2023",
@@ -54,7 +54,7 @@ const Purchases = () => {
       </div>
 
       <div className="mt-10">
-        {purchasesData.map((el, idx) => {
+        {ordersData.map((el, idx) => {
           return (
             <div
               className="border rounded-lg border-solid bg-white border-accentGray-600 mb-4"
@@ -71,8 +71,8 @@ const Purchases = () => {
                   <div className="flex gap-4">
                     <div className="hidden sm:flex cursor-pointer text-accentBlue-500 gap-2 items-center text-xs font-semibold">
                       <img
-                        src="/assets/vectors/purchases/offer.svg"
-                        alt="message"
+                        src="/assets/vectors/purchases/history.svg"
+                        alt="history"
                       />
                       Offer History
                     </div>
@@ -121,9 +121,44 @@ const Purchases = () => {
                     </a>
                   </div>
                   <div className="col-span-6 md:col-span-3 flex justify-end items-end md:items-start">
-                    <button className="flex-shrink-0 border border-solid bg-accentGray-400 border-accentGray-600 rounded-md h-10 px-6 font-bold hover:-translate-y-1 transition-transform ">
-                      Message Buyer
-                    </button>
+                    <div className="w-full">
+                      <div className="flex justify-end">
+                        <button className="flex-shrink-0 border border-solid bg-accentGray-400 border-accentGray-600 rounded-md h-10 px-6 font-bold hover:-translate-y-1 transition-transform ">
+                          Message Buyer
+                        </button>
+                      </div>
+
+                      <div className="hidden md:block min-w-full md:min-w-0 mt-3">
+                        <div className="text-accentGray-700 text-[10px] sm:text-end ">
+                          Payout Status
+                        </div>
+                        <div className="w-full h-2 relative mt-1">
+                          <div className="bg-accentYellow h-[1px] absolute top-1/2 left-0 -translate-y-1/2 w-full"></div>
+                          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full flex justify-between items-center">
+                            <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                            <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                            <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                            <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-span-12 block md:hidden">
+                    <div className="min-w-full md:min-w-0 mt-3">
+                      <div className="text-accentGray-700 text-[10px] sm:text-end ">
+                        Payout Status
+                      </div>
+                      <div className="w-full h-2 relative mt-1">
+                        <div className="bg-accentYellow h-[1px] absolute top-1/2 left-0 -translate-y-1/2 w-full"></div>
+                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full flex justify-between items-center">
+                          <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                          <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                          <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                          <div className="w-2 h-2 rounded-[50%] bg-accentYellow"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -138,13 +173,13 @@ const Purchases = () => {
                     </div>
 
                     <button className="border border-solid bg-accentGray-400 border-accentGray-600 rounded-md h-9 px-4  hover:-translate-y-1 transition-transform text-accentGray-200 text-xs">
-                      Write Review
+                      Packing Slip
                     </button>
                     <button className="border border-solid bg-accentGray-400 border-accentGray-600 rounded-md h-9 px-4  hover:-translate-y-1 transition-transform text-accentGray-200 text-xs">
-                      Sell This Item
+                      Print Label
                     </button>
                     <button className="border border-solid bg-accentGray-400 border-accentGray-600 rounded-md h-9 px-4  hover:-translate-y-1 transition-transform text-accentGray-200 text-xs">
-                      Add to Gear Room
+                      Purchase Additional Shipping Label
                     </button>
                   </div>
                   <div className="min-w-full md:min-w-0">
@@ -175,8 +210,8 @@ const Purchases = () => {
                   <div className="flex gap-3">
                     <div className="flex sm:hidden cursor-pointer text-accentBlue-500 gap-2 items-center text-xs font-semibold">
                       <img
-                        src="/assets/vectors/purchases/offer.svg"
-                        alt="message"
+                        src="/assets/vectors/purchases/history.svg"
+                        alt="history"
                       />
                       Offer History
                     </div>

@@ -4,7 +4,7 @@ import Tabs from "../../../common/Tabs/Tabs";
 
 const tabs = [
   {
-    to: "/transactions/account",
+    to: "/transactions/purchases",
     icon: "/assets/vectors/transactions/purchases.svg",
     label: "Purchases",
   },
@@ -39,7 +39,7 @@ const TransactionsLayout = () => {
   return (
     <>
       <Jumbo />
-      <Tabs tabsData={tabs} />
+      <Tabs tabsData={tabs} withSearch />
 
       <Outlet />
     </>

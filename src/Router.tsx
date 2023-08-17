@@ -39,6 +39,9 @@ import Subscriptions from "./components/pages/Settings/Subscriptions";
 import Purchases from "./components/pages/Transactions/Purchases";
 import Earnings from "./components/pages/Transactions/Earnings";
 import MyBill from "./components/pages/Transactions/MyBill";
+import ManageListings from "./components/pages/Transactions/ManageListings";
+import Orders from "./components/pages/Transactions/Orders";
+import Offers from "./components/pages/Transactions/Offers";
 
 const AppRouter = () => {
   return (
@@ -47,7 +50,6 @@ const AppRouter = () => {
         <Route path="/" element={<MainLayout />}>
           {/* <Route path='/auth' element={<Auth isModalActive={hidden.value} type={type.value} />}/> */}
           <Route index element={<Home />} />
-
 
           <Route path="/single/listing" element={<ListingPage />} />
           <Route path="/single/new-gear" element={<NewGearPage />} />
@@ -98,8 +100,11 @@ const AppRouter = () => {
           </Route>
           <Route path="transactions" element={<TransactionsLayout />}>
             <Route path="purchases" element={<Purchases />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="offers" element={<Offers />} />
             <Route path="earnings" element={<Earnings />} />
             <Route path="my-bill" element={<MyBill />} />
+            <Route path="manage-listings" element={<ManageListings />} />
           </Route>
         </Route>
       </Routes>
